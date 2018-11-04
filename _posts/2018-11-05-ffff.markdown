@@ -1,0 +1,9 @@
+asdfasdf
+===
+
+```python
+from pwn import *
+
+s = process("./asdf")
+
+```
