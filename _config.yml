@@ -11,7 +11,7 @@ paginate: 15
 baseurl: /
 domain_name: 'http://hyoom1024.github.io'
 google_analytics: 'UA-128578957-1'
-gems: [jekyll-paginate, jekyll-feed, jekyll-gist
+gems: [jekyll-paginate, jekyll-feed, jekyll-gist]
 
 # Details for the RSS feed generator
 url:            'http://hyoom1024.github.io'
