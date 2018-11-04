@@ -13,4 +13,4 @@ gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'http://hyoom1024.github.io'
-author:         'Hyomin'
+author:         'hyoom'
