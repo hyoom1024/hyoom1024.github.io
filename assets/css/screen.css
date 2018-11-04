@@ -52,8 +52,8 @@ hr {
 }
 mark { background: #FF0; color: #000; }
 code, kbd, pre,
-samp { font-family: monospace, sans-serif; font-size: 1em; }
-pre { font-family: monospace; white-space: pre-wrap; }
+samp { font-family: monospace; font-size: 1em; }
+pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
 sub, sup {
