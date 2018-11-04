@@ -7,7 +7,7 @@ highlighter: rouge
 highlight:
   line_number: true
 logo: true
-paginate: 15
+paginate: 5
 baseurl: /
 domain_name: 'http://hyoom1024.github.io'
 google_analytics: 'UA-128578957-1'
