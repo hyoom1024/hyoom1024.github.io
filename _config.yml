@@ -13,6 +13,19 @@ domain_name: 'http://hyoom1024.github.io'
 google_analytics: 'UA-128578957-1'
 gems: [jekyll-paginate, jekyll-feed, jekyll-gist]
 
+# The font used for headings. Expects a string that is a valid CSS font-family value.
+font_heading: "'Roboto Slab', 'Nanum Gothic', Helvetica, Arial, sans-serif"
+
+# The text font. Expects a string that is a valid CSS font-family value.
+font: "'Noto Sans', 'Nanum Gothic', Helvetica, Arial, sans-serif"
+
+# The string encoding what fonts to fetch from Google Fonts.
+# See: https://qwtel.com/hydejack/docs/configuration/
+google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+
+# If you do not use a Google Fonts, uncomment the line below
+# no_google_fonts:     true
 # Details for the RSS feed generator
+
 url:            'http://hyoom1024.github.io'
 author:         'hyoom'
