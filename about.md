@@ -31,8 +31,6 @@ I am Newbie and I will be a hacker in the future.
 ---
 If you want to contact me, please refer to below.
 
-> Email : <8891ee@naver.com>
-> 
-> Facebook : <https://facebook.com/hyomin1024>
-> 
-> Github : <https://github.com/hyoom1024>
+> Email : <8891ee@naver.com>  
+> Facebook : <https://facebook.com/hyomin1024>  
+> Github : <https://github.com/hyoom1024>  
