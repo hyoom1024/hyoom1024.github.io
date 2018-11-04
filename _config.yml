@@ -3,7 +3,9 @@ description: pwnable, reversing, coding..
 meta_description: "hyoom's hacking blog"
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
+highlight:
+  line_number: true
 logo: true
 paginate: 15
 baseurl: /
