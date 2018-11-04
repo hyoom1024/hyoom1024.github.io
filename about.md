@@ -5,13 +5,9 @@ title: About me
 
 
 My name is Hyomin.
-
 I am 18 years old and a South Korea high school student.
-
 I am attending Sunrin Internet High School and studying security.
-
 I usually do CTF and sometimes do my project.
-
 I am Newbie and I will be a hacker in the future.
 
 ## Certificate
