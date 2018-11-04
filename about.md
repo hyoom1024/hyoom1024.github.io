@@ -3,7 +3,7 @@ layout: page
 title: About me 
 ---
 
-
+  
 My name is Hyomin.  
 I am 18 years old and a South Korea high school student.   
 I am attending Sunrin Internet High School and studying security.   
