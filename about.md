@@ -3,12 +3,11 @@ layout: page
 title: About me 
 ---  
 
-  
-My name is Hyomin.  
-I am 18 years old and a South Korea high school student.   
-I am attending Sunrin Internet High School and studying security.   
-I usually do CTF and sometimes do my project.   
-I am Newbie and I will be a hacker in the future.   
+이름 : 이효민  
+나이 : 18  
+
+선린인터넷고에 재학 중이며, 보안을 공부 하고 있음.  
+CTF 참가 활동, 개인 프로젝트를 주로 함.  
 
 ## Certificate
 
@@ -33,7 +32,7 @@ I am Newbie and I will be a hacker in the future.
 
 
 ---
-If you want to contact me, please refer to below.
+연락을 원하시면 아래를 참고해주세요.
 
 
 + Email : <8891ee@naver.com>  
