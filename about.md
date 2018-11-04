@@ -3,11 +3,15 @@ layout: page
 title: About me 
 ---
 
-## Introduce
+
 My name is Hyomin.
+
 I am 18 years old and a South Korea high school student.
+
 I am attending Sunrin Internet High School and studying security.
+
 I usually do CTF and sometimes do my project.
+
 I am Newbie and I will be a hacker in the future.
 
 ## Certificate
@@ -32,5 +36,7 @@ I am Newbie and I will be a hacker in the future.
 If you want to contact me, please refer to below.
 
 > Email : <8891ee@naver.com>
+> 
 > Facebook : <https://facebook.com/hyomin1024>
+> 
 > Github : <https://github.com/hyoom1024>
