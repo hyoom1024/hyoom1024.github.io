@@ -1,16 +1,16 @@
 name: Your New Jekyll Site
 description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+meta_description: "hyoom's hacking blog"
 
 markdown: kramdown
 highlighter: pygments
-logo: false
+logo: true
 paginate: 15
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'http://hyoom1024.github.io'
+google_analytics: 'UA-128578957-1'
 gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url:            'blog url'
-author:         'Your Name'
+url:            'http://hyoom1024.github.io'
+author:         'Hyomin Lee'
