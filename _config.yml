@@ -7,6 +7,7 @@ highlighter: pygments
 logo: true
 paginate: 15
 baseurl: /
+cover : /images/etna.jpg
 domain_name: 'http://hyoom1024.github.io'
 google_analytics: 'UA-128578957-1'
 gems: [jekyll-paginate]
