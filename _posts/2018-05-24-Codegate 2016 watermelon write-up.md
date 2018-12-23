@@ -6,8 +6,6 @@ title: Codegate 2016 - watermelon writeup
 
 어디선가 많이 들어본 문제였는데 이제서야 푼다.
 
-
-
 먼저 바이너리를 분석해보겠다.
 
 ![](https://lh6.googleusercontent.com/CEtV2ySb1Pauqv7f_VM-0rTe_cxnMbRVegCVACPt4KPs9JG1jB7sY-XdIUWPcEL-ncouqfY9Lg0eyYnVtyqYXg6qlMSeG6BZSiodj1FUmu13aeyvNlp7ubi1LfUzwmFpUUDq950X)
