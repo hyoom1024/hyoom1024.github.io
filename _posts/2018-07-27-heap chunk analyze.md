@@ -1,14 +1,14 @@
 
   
-º¸´Ù ÈüÀ» Àß ÀÌÇØÇÏ±â À§ÇØ¼­ Á÷Á¢ ÄÚµå¸¦ ÀÛ¼ºÇÏ¿© malloc°ú free°úÁ¤¿¡¼­ÀÇ heap chunkÀÇ
+ë³´ë‹¤ íž™ì„ ìž˜ ì´í•´í•˜ê¸° ìœ„í•´ì„œ ì§ì ‘ ì½”ë“œë¥¼ ìž‘ì„±í•˜ì—¬ mallocê³¼ freeê³¼ì •ì—ì„œì˜ heap chunkì˜
 
-±¸Á¶¿Í º¯È­ÇÏ´Â °úÁ¤À» ºÐ¼®ÇÏ¿´´Ù.
+êµ¬ì¡°ì™€ ë³€í™”í•˜ëŠ” ê³¼ì •ì„ ë¶„ì„í•˜ì˜€ë‹¤.
 
-gdb¸¦ ÀÌ¿ëÇØ¼­ ºÐ¼®ÇØº¸µµ·Ï ÇÏÀÚ. ³ª´Â gdbÀÇ »óÀ§ ¹öÀüÀÎ gef¸¦ ÀÌ¿ëÇß´Ù.
+gdbë¥¼ ì´ìš©í•´ì„œ ë¶„ì„í•´ë³´ë„ë¡ í•˜ìž. ë‚˜ëŠ” gdbì˜ ìƒìœ„ ë²„ì „ì¸ gefë¥¼ ì´ìš©í–ˆë‹¤.
 
-±×¸®°í 64bit ±âÁØÀ¸·Î ÄÄÆÄÀÏ/ºÐ¼®ÇÏ¿´´Ù. 32ºñÆ®´Â Á÷Á¢ÇØº¸±æ ¹Ù¶õ´Ù.
+ê·¸ë¦¬ê³  64bit ê¸°ì¤€ìœ¼ë¡œ ì»´íŒŒì¼/ë¶„ì„í•˜ì˜€ë‹¤. 32ë¹„íŠ¸ëŠ” ì§ì ‘í•´ë³´ê¸¸ ë°”ëž€ë‹¤.
 
-¸ÕÀú ³»°¡ ÀÛ¼ºÇÑ ÄÚµåÀÌ´Ù.
+ë¨¼ì € ë‚´ê°€ ìž‘ì„±í•œ ì½”ë“œì´ë‹¤.
 
 >heapstruct.c
 
@@ -38,38 +38,38 @@ free(buf1);
 }
 ```
 
-¸Å¿ì °£´ÜÇÑ ÄÚµåÀÌ´Ù.
+ë§¤ìš° ê°„ë‹¨í•œ ì½”ë“œì´ë‹¤.
 
-1.  buf¸¦ 256¸¸Å­ mallocÇØÁØ´Ù. ±×¸®°í buf1Àº 512¸¸Å­ mallocÇØÁØ´Ù.
+1.  bufë¥¼ 256ë§Œí¼ mallocí•´ì¤€ë‹¤. ê·¸ë¦¬ê³  buf1ì€ 512ë§Œí¼ mallocí•´ì¤€ë‹¤.
     
-2.  argv[1] °ú argv[2]¸¦ °¢°¢ chunk¿¡ strcpy¸¦ ÇØÁØ´Ù.
+2.  argv[1] ê³¼ argv[2]ë¥¼ ê°ê° chunkì— strcpyë¥¼ í•´ì¤€ë‹¤.
     
-3.  buf ¿Í buf1 Â÷·Ê´ë·Î freeÇØÁØ´Ù.
+3.  buf ì™€ buf1 ì°¨ë¡€ëŒ€ë¡œ freeí•´ì¤€ë‹¤.
     
 
-±×·¯¸é ÀÌÁ¦ ºÐ¼®À» ÇØº¸ÀÚ.
+ê·¸ëŸ¬ë©´ ì´ì œ ë¶„ì„ì„ í•´ë³´ìž.
 
-µð½º¾î¼Àºí ÇÑ ÄÚµåÀÌ´Ù.
+ë””ìŠ¤ì–´ì…ˆë¸” í•œ ì½”ë“œì´ë‹¤.
 
 ![](https://lh5.googleusercontent.com/m-tqzAH_vDIl1WLAk2ozWvSOQYA75SbPZvgsYQvQJsjDK2tWEWMmp806gHqnLdrFUc-qw8B_BnmPbKTHoFJQnsrbKEZDn-I97tKg6MYnbJJjUQwaYWLeD5UUHvXPuTfTyQ16ANPu)
 
-Ã¹ malloc¶§ 0x100 , 256¸¸Å­ Àß µé¾î°¡´Â °ÍÀ» º¼ ¼ö ÀÖ´Ù.
+ì²« mallocë•Œ 0x100 , 256ë§Œí¼ ìž˜ ë“¤ì–´ê°€ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìžˆë‹¤.
 
-¸ÕÀú Ã³À½ malloc ÇÏ°í ³­ ´ÙÀ½ÀÎ main+25¿¡ breakpoint¸¦ °É¾îº¸°Ú´Ù.
+ë¨¼ì € ì²˜ìŒ malloc í•˜ê³  ë‚œ ë‹¤ìŒì¸ main+25ì— breakpointë¥¼ ê±¸ì–´ë³´ê² ë‹¤.
 
 ![](https://lh5.googleusercontent.com/2nwfHq5abS487wwl9BDm7Lq9de3rO3SUWMGosv0JVMDLTQt7Bz132cvek-_1Hcgj15uTCksRl8grqhfKj5gLbj3AjNAppAt36uJMF8V8R6fb7TkivbtW8RDS8KSsxxFWfgoabbGP)
 
-r·Î ½ÇÇàÇÑ´Ù.
+rë¡œ ì‹¤í–‰í•œë‹¤.
 
-±×¸®°í Èü »óÅÂ¸¦ ºÁº¸°Ú´Ù. $rax - 16ÇÏ¸é È®ÀÎ ÇÒ ¼ö ÀÖ´Ù. 32ºñÆ®¿¡¼± $eax-8 ÀÌ´Ù.
+ê·¸ë¦¬ê³  íž™ ìƒíƒœë¥¼ ë´ë³´ê² ë‹¤. $rax - 16í•˜ë©´ í™•ì¸ í•  ìˆ˜ ìžˆë‹¤. 32ë¹„íŠ¸ì—ì„  $eax-8 ì´ë‹¤.
 
-¶Ç´Â 0x602000À» È®ÀÎ ÇØµµ µÈ´Ù.
+ë˜ëŠ” 0x602000ì„ í™•ì¸ í•´ë„ ëœë‹¤.
 
 ![](https://lh3.googleusercontent.com/1H8WOKc62v7xlxPtWNgs4Q_mJfbUbyPrBax-6Yj6kqCYCBCXhiMKRvV1n2BZqR9CEjRIA-Nj4OtTUamkBz--cf1Z_-_2S0sClhW4Y61Rqr9-5K-Azx_x2W0qGH59PKGHcZ_Sxmg-)
 
-ÈüÀÌ Àß ÇÒ´ç µÇ¾ú´Ù. 64ºñÆ®ÀÌ±â ¶§¹®¿¡ g¸¦ ÀÌ¿ëÇÏ¿© 8¹ÙÀÌÆ®¾¿ Ãâ·ÂÇÏ¿´´Ù. ÀÌÁ¦ Èü ±¸Á¶¸¦ È®ÀÎÇØ º¸°Ú´Ù.
+íž™ì´ ìž˜ í• ë‹¹ ë˜ì—ˆë‹¤. 64ë¹„íŠ¸ì´ê¸° ë•Œë¬¸ì— gë¥¼ ì´ìš©í•˜ì—¬ 8ë°”ì´íŠ¸ì”© ì¶œë ¥í•˜ì˜€ë‹¤. ì´ì œ íž™ êµ¬ì¡°ë¥¼ í™•ì¸í•´ ë³´ê² ë‹¤.
 
-±× Àü¿¡, ¾Ë¾ÆµÎ¾î¾ß ÇÒ °ÍÀÌÀÖ´Ù. heap chunkÀÇ ±¸Á¶´Â ÇÒ´çµÇ¾úÀ» ¶§¿Í freeµÇ¾úÀ» ¶§¿Í ±¸Á¶°¡ ´Ù¸£´Ù.
+ê·¸ ì „ì—, ì•Œì•„ë‘ì–´ì•¼ í•  ê²ƒì´ìžˆë‹¤. heap chunkì˜ êµ¬ì¡°ëŠ” í• ë‹¹ë˜ì—ˆì„ ë•Œì™€ freeë˜ì—ˆì„ ë•Œì™€ êµ¬ì¡°ê°€ ë‹¤ë¥´ë‹¤.
 
 
 struct malloc_chunk {
@@ -93,9 +93,9 @@ struct malloc_chunk* bk_nextsize;
 typedef  struct malloc_chunk* mchunkptr;
 
 
-ÀÌ´Â malloc_chunkÀÇ ±¸Á¶Ã¼ÀÌ´Ù.
+ì´ëŠ” malloc_chunkì˜ êµ¬ì¡°ì²´ì´ë‹¤.
 
-ÇÒ´çµÈ malloc chunkÀÇ ±¸Á¶´Â
+í• ë‹¹ëœ malloc chunkì˜ êµ¬ì¡°ëŠ”
 
 chunk-> +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  
 | Size of previous chunk, if unallocated (P clear) |  
@@ -112,9 +112,9 @@ nextchunk-> +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 | Size of next chunk, in bytes |A|0|1|  
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-ÀÌ·¸°Ô µÇ°í
+ì´ë ‡ê²Œ ë˜ê³ 
 
-freeµÈ malloc chunkÀÇ ±¸Á¶´Â
+freeëœ malloc chunkì˜ êµ¬ì¡°ëŠ”
 
 chunk-> +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  
 | Size of previous chunk, if unallocated (P clear) |  
@@ -134,140 +134,140 @@ nextchunk-> +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 | Size of next chunk, in bytes |A|0|0|  
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-ÀÌ·¸°Ô µÈ´Ù. ºÐ¼®À» ÇÏ¸é¼­ ºñ±³ÇØº¸ÀÚ.
+ì´ë ‡ê²Œ ëœë‹¤. ë¶„ì„ì„ í•˜ë©´ì„œ ë¹„êµí•´ë³´ìž.
 
-ÀÚ¼¼ÇÑ ³»¿ëÀº
+ìžì„¸í•œ ë‚´ìš©ì€
 
 [https://heap-exploitation.dhavalkapil.com/diving_into_glibc_heap/malloc_chunk.html](https://heap-exploitation.dhavalkapil.com/diving_into_glibc_heap/malloc_chunk.html)
 
-ÀÌ ±ÛÀ» Âü°íÇÏ¸é ÁÁ´Ù.
+ì´ ê¸€ì„ ì°¸ê³ í•˜ë©´ ì¢‹ë‹¤.
 
-´Ù½Ã µ¹¾Æ¿Í¼­,
+ë‹¤ì‹œ ëŒì•„ì™€ì„œ,
 
 ![](https://lh3.googleusercontent.com/1H8WOKc62v7xlxPtWNgs4Q_mJfbUbyPrBax-6Yj6kqCYCBCXhiMKRvV1n2BZqR9CEjRIA-Nj4OtTUamkBz--cf1Z_-_2S0sClhW4Y61Rqr9-5K-Azx_x2W0qGH59PKGHcZ_Sxmg-)
 
-Àú À§¿¡ ¿µ¾î·Î ¾²¿©Áø ±¸Á¶¿Í ºñ±³ÇØº¸ÀÚ.
+ì € ìœ„ì— ì˜ì–´ë¡œ ì“°ì—¬ì§„ êµ¬ì¡°ì™€ ë¹„êµí•´ë³´ìž.
 
 0x602000 -> prev_size
 
-prev_size´Â ÀÌÀü chunk°¡ free µÇ¸é ¼³Á¤µÇ´Â °ªÀ¸·Î, ÇÃ·¡±×¸¦ Á¦¿ÜÇÑ ÀÌÀü Ã»Å©ÀÇ Å©±â¸¦ ±â·ÏÇÑ´Ù. ÀÌ¸¦ ÀÌ¿ëÇØ¼­ ÀÌÀü chunkÀÇ À§Ä¡¸¦ ½±°Ô ¾Ë ¼ö ÀÖ´Ù.
+prev_sizeëŠ” ì´ì „ chunkê°€ free ë˜ë©´ ì„¤ì •ë˜ëŠ” ê°’ìœ¼ë¡œ, í”Œëž˜ê·¸ë¥¼ ì œì™¸í•œ ì´ì „ ì²­í¬ì˜ í¬ê¸°ë¥¼ ê¸°ë¡í•œë‹¤. ì´ë¥¼ ì´ìš©í•´ì„œ ì´ì „ chunkì˜ ìœ„ì¹˜ë¥¼ ì‰½ê²Œ ì•Œ ìˆ˜ ìžˆë‹¤.
 
-´ÙÀ½ 8¹ÙÀÌÆ®¸¦ º¸¸é,
+ë‹¤ìŒ 8ë°”ì´íŠ¸ë¥¼ ë³´ë©´,
 
 0x602008 -> size of chunk
 
-ÀÌ 8¹ÙÀÌÆ®¿¡¼­´Â ÀÌ chunkÀÇ ÃÑ Å©±â¸¦ ±â·ÏÇÑ´Ù. ÇÏÀ§ 1ºñÆ®´Â ÇÃ·¡±×·Î, prev_inuseÀÌ´Ù.
+ì´ 8ë°”ì´íŠ¸ì—ì„œëŠ” ì´ chunkì˜ ì´ í¬ê¸°ë¥¼ ê¸°ë¡í•œë‹¤. í•˜ìœ„ 1ë¹„íŠ¸ëŠ” í”Œëž˜ê·¸ë¡œ, prev_inuseì´ë‹¤.
 
-prev_inuse´Â ÀÌÀü chunk°¡ »ç¿ëÁßÀÏ ¶§ ±â·ÏµÇ´Â ÇÃ·¡±×ÀÌ´Ù.
+prev_inuseëŠ” ì´ì „ chunkê°€ ì‚¬ìš©ì¤‘ì¼ ë•Œ ê¸°ë¡ë˜ëŠ” í”Œëž˜ê·¸ì´ë‹¤.
 
-±×·¸´Ù¸é ÀÌ chunkÀÇ Å©±â´Â 0x110ÀÏ °ÍÀÌ´Ù.
+ê·¸ë ‡ë‹¤ë©´ ì´ chunkì˜ í¬ê¸°ëŠ” 0x110ì¼ ê²ƒì´ë‹¤.
 
 ![](https://lh4.googleusercontent.com/JXaEMxkBKlS-rY__WGSvqi8xS-GbgZtic4SLg1L9ijDaGmyuLGBxbJIjFRK_GshZkU3MHmMM0gjCK34U0IWAv4wL-OYfV36IKAhfO2ueWRrK_ZsCy2tbUQy89SwRuHPtaDEyoP4D)
 
-272ÀÌ´Ù.
+272ì´ë‹¤.
 
-data(256) + prev_size(8) + size_of_chunk(8) = 272 µü ¸Â´Ù.
+data(256) + prev_size(8) + size_of_chunk(8) = 272 ë”± ë§žë‹¤.
 
 0x602010 -> data
 
-¿©±â¼­ ºÎÅÍ 256¹ÙÀÌÆ® ¸¸Å­Àº dataÀÌ´Ù.
+ì—¬ê¸°ì„œ ë¶€í„° 256ë°”ì´íŠ¸ ë§Œí¼ì€ dataì´ë‹¤.
 
-Á» ÀÌµû strcpy ÀÌÈÄ¿¡ °ªÀÌ µé¾î°¡´Â °ÍÀ» È®ÀÎÇØº¸°Ú´Ù.
+ì¢€ ì´ë”° strcpy ì´í›„ì— ê°’ì´ ë“¤ì–´ê°€ëŠ” ê²ƒì„ í™•ì¸í•´ë³´ê² ë‹¤.
 
 0x602118 -> Top chunk
 
 ![](https://lh6.googleusercontent.com/jrOsDkYVyLHixj4pd5qAeOcl9KmXQBj1nNj6WBMArv9lv9vbb6i07caDFNQPu64PM-V3iv4yDaLUAznFskqi4iT50EIF75QBKuBMeGSxaKs4t2Y9soY4LpQ2wC6KLflm5VkYJ8cM)
 
-0x20ef1ÀÌ¶ó´Â °ªÀÌ µé¾î°¡ ÀÖ´Ù.
+0x20ef1ì´ë¼ëŠ” ê°’ì´ ë“¤ì–´ê°€ ìžˆë‹¤.
 
-¸ðµç chunkÀÇ ¸Ç ¸¶Áö¸·¿¡´Â Top chunk°¡ Á¸ÀçÇÑ´Ù. Top chunk´Â ¾î¶°ÇÑ bin¿¡µµ ¼ÓÇÏÁö ¾ÊÀ¸¸ç Ç×»ó heap¿µ¿ª ¸¶Áö¸·¿¡ À§Ä¡ÇÑ´Ù. ´ÙÀ½ mallocÇÒ ¶§ ´ÙÀ½ chunk size¸¦ top chunk¿¡¼­ ÇÒ´çÇÏ°í ³ª¸ÓÁö´Â ´Ù½Ã top chunk°¡ µÈ´Ù.
+ëª¨ë“  chunkì˜ ë§¨ ë§ˆì§€ë§‰ì—ëŠ” Top chunkê°€ ì¡´ìž¬í•œë‹¤. Top chunkëŠ” ì–´ë– í•œ binì—ë„ ì†í•˜ì§€ ì•Šìœ¼ë©° í•­ìƒ heapì˜ì—­ ë§ˆì§€ë§‰ì— ìœ„ì¹˜í•œë‹¤. ë‹¤ìŒ mallocí•  ë•Œ ë‹¤ìŒ chunk sizeë¥¼ top chunkì—ì„œ í• ë‹¹í•˜ê³  ë‚˜ë¨¸ì§€ëŠ” ë‹¤ì‹œ top chunkê°€ ëœë‹¤.
 
-Àß ÀÌÇØ ¾È°¡°ÚÁö¸¸ °è¼Ó ºÐ¼®ÇÏ¸é¼­ º¸°Ú´Ù.
+ìž˜ ì´í•´ ì•ˆê°€ê² ì§€ë§Œ ê³„ì† ë¶„ì„í•˜ë©´ì„œ ë³´ê² ë‹¤.
 
-´ÙÀ½ malloc ÀÎ main+39¿¡ breakpoint¸¦ °É¾ú´Ù.
+ë‹¤ìŒ malloc ì¸ main+39ì— breakpointë¥¼ ê±¸ì—ˆë‹¤.
 
 ![](https://lh6.googleusercontent.com/sBJKVoRHr-mLM0uSWdvhEZKnIpAJlQ_o3lIpuLzHx7amaXlX120dG45MBhONzz1iOqkqZ25QB0lzHE8OMjXmAXVxHY6gPBwv1DcXaEy2fGXDMRWRdKCPtmW6pdzmI5RJqHpbnL_c)
 
-Èü ¿µ¿ª »óÈ²ÀÌ´Ù.
+íž™ ì˜ì—­ ìƒí™©ì´ë‹¤.
 
 ![](https://lh5.googleusercontent.com/LdPLyVEOIkp48MpeeyNxiFNUg7OuA7WiDcZsGnxbDdDrcnEk3ShEkfwi2XxXPrh69Hjtd1-FcImcGVHeKS4aWzYvAjKSFMmy8144Pt9nUZmeQmP_rttYTda8DxlUU_cp_aNdnIf6)
 
-¸Å¿ì ½Å±âÇÏ´Ù.
+ë§¤ìš° ì‹ ê¸°í•˜ë‹¤.
 
-¾Æ±î Top chunk ¿´´ø 0x602118ºÎºÐÀÌ, 2¹øÂ° malloc_chunkÀÇ size of chunk·Î ¹Ù²î¿´´Ù.
+ì•„ê¹Œ Top chunk ì˜€ë˜ 0x602118ë¶€ë¶„ì´, 2ë²ˆì§¸ malloc_chunkì˜ size of chunkë¡œ ë°”ë€Œì˜€ë‹¤.
 
-±×¸®°í Á¦ÀÏ ¸¶Áö¸·, 0x602328¿¡ Top chunk°¡ ÀÖ´Â °ÍÀ» È®ÀÎ ÇÒ ¼ö ÀÖ´Ù.
+ê·¸ë¦¬ê³  ì œì¼ ë§ˆì§€ë§‰, 0x602328ì— Top chunkê°€ ìžˆëŠ” ê²ƒì„ í™•ì¸ í•  ìˆ˜ ìžˆë‹¤.
 
-Top chunk¸¦ ºñ±³ÇØº¸ÀÚ ¾Æ±î Ã¹ ¹øÂ° malloc chunk¿¡ ÀÖ´ø Top chunk ÀÇ °ªÀº 0x20ef1
+Top chunkë¥¼ ë¹„êµí•´ë³´ìž ì•„ê¹Œ ì²« ë²ˆì§¸ malloc chunkì— ìžˆë˜ Top chunk ì˜ ê°’ì€ 0x20ef1
 
-ÀÌ°í 2¹øÂ° mallocÀ» ÁøÇà ÇÑ µÚ Top chunk ÀÇ °ªÀº 0x20ce1ÀÌ´Ù.
+ì´ê³  2ë²ˆì§¸ mallocì„ ì§„í–‰ í•œ ë’¤ Top chunk ì˜ ê°’ì€ 0x20ce1ì´ë‹¤.
 
-ÀÏ´Ü 2¹øÂ° mallocÀÇ size of chunk ´Â 0x211ÀÌ´Ù. ÇÏÀ§ 1ºñÆ®´Â flagÀÌ´Ï±ñ Á¦¿ÜÇÏ¸é 0x210, 10Áø¼ö·Î 528ÀÌ´Ù.
+ì¼ë‹¨ 2ë²ˆì§¸ mallocì˜ size of chunk ëŠ” 0x211ì´ë‹¤. í•˜ìœ„ 1ë¹„íŠ¸ëŠ” flagì´ë‹ˆê¹ ì œì™¸í•˜ë©´ 0x210, 10ì§„ìˆ˜ë¡œ 528ì´ë‹¤.
 
-data(512) + prev_size(8) + size_of_chunk(8) = 528ÀÌ ¸Â´Ù.
+data(512) + prev_size(8) + size_of_chunk(8) = 528ì´ ë§žë‹¤.
 
-±×·³ Top chunkÀÇ º¯È­¸¦ º¸¸é 0x20ef1 -> 0x20ce1
+ê·¸ëŸ¼ Top chunkì˜ ë³€í™”ë¥¼ ë³´ë©´ 0x20ef1 -> 0x20ce1
 
 ![](https://lh4.googleusercontent.com/aUpAyMarMNpvy4VRnLFDf90NR5MFGMetyWjKS1MmLJTUuhSqucXGERiqFRG7dK_nn-by0SKdR3A-yx32VQOa8W9qPgGMf79BoDLI3G0ri85QQp5s0CST1m0UOMDspGlcp7OtnUnx)
 
-°è»êÀÌ µü ¸Â´Ù.
+ê³„ì‚°ì´ ë”± ë§žë‹¤.
 
-Top chunk¿¡¼­ »õ·Î mallocÇÒ size¸¸Å­À» Top chunk¿¡¼­ ÇÒ´ç ÇÑ µÚ, ³ª¸ÓÁö´Â ´Ù½Ã Top chunk°¡ µÈ´Ù.
+Top chunkì—ì„œ ìƒˆë¡œ mallocí•  sizeë§Œí¼ì„ Top chunkì—ì„œ í• ë‹¹ í•œ ë’¤, ë‚˜ë¨¸ì§€ëŠ” ë‹¤ì‹œ Top chunkê°€ ëœë‹¤.
 
-(¾ÏÆ° ½Å±â)
+(ì•”íŠ¼ ì‹ ê¸°)
 
-ÀÌÁ¦ ÇÒ´ç µÈ malloc ±¸Á¶´Â È®ÀÎÀ» Çß´Ù.
+ì´ì œ í• ë‹¹ ëœ malloc êµ¬ì¡°ëŠ” í™•ì¸ì„ í–ˆë‹¤.
 
-free chunk¸¦ º¸±â Àü¿¡ argv[1] °ú argv[2] ¿¡ °ªÀ» ³Ö°í data°¡ µé¾î°¡´Â °ÍÀ» È®ÀÎ ÇØº¸°Ú´Ù.
+free chunkë¥¼ ë³´ê¸° ì „ì— argv[1] ê³¼ argv[2] ì— ê°’ì„ ë„£ê³  dataê°€ ë“¤ì–´ê°€ëŠ” ê²ƒì„ í™•ì¸ í•´ë³´ê² ë‹¤.
 
-strcpy°¡ ³¡³­ ÈÄÀÎ
+strcpyê°€ ëë‚œ í›„ì¸
 
 ![](https://lh5.googleusercontent.com/V5jqvq1MNbNFNwbvMjYKNUHo8zS3mTrmszbfR_CGpNnPbqyD_9PGfiLxB3O2GxqKtrEc4laCQuYULCUTe4ny6b_0c9nelrJySFpOtgHNtN5nKn0BWg3W8YNFFCdpEYHkewoZGv9d)
 
-¿¡ breakpoint¸¦ °É¾îÁÖ¾ú´Ù.
+ì— breakpointë¥¼ ê±¸ì–´ì£¼ì—ˆë‹¤.
 
-´Ù½Ã rÀ» ÅëÇØ ½ÇÇàÇÏ°í strcpy°¡ µÉ ¶§±îÁö ÁøÇàÇØº¸°Ú´Ù.
+ë‹¤ì‹œ rì„ í†µí•´ ì‹¤í–‰í•˜ê³  strcpyê°€ ë  ë•Œê¹Œì§€ ì§„í–‰í•´ë³´ê² ë‹¤.
 
 ![](https://lh3.googleusercontent.com/YlWlRFN-feIe0tvxQdZC8je59nyAU4JxYaJU1bSIczTM76ofmtwX3k_VPS2quxXruQS4lS_s_OEBhzOywGwPPx4vhFAPuDWWU-3nM8lNUhZfJ5s-4yUiLbcS-lpveR_PA472ksW-)
 
-ÀÌ·¸°Ô ÀÎÀÚ¸¦ ÁÖ¾ú´Ù.
+ì´ë ‡ê²Œ ì¸ìžë¥¼ ì£¼ì—ˆë‹¤.
 
-Èü ¿µ¿ªÀ» º¸°Ú´Ù.
+íž™ ì˜ì—­ì„ ë³´ê² ë‹¤.
 
 ![](https://lh4.googleusercontent.com/QOTgYGdQLGwzK2ZhUTN2bN0yU3-dqBqc8gdjybq5IZ-xzz_Tof6L5DzLg5S5rXDgw8lqtHX_bcEl_Cfh0iGFlPUNXM_tLzEnb6OBCx5D4Iks18HFdRreOiSbov8kugiiaGxkA2Is)
 
-Àß µé¾î°¬´Ù.
+ìž˜ ë“¤ì–´ê°”ë‹¤.
 
-ÀÌÁ¦ free chunk¸¦ ºÐ¼®ÇØº¸°Ú´Ù.
+ì´ì œ free chunkë¥¼ ë¶„ì„í•´ë³´ê² ë‹¤.
 
-ºêÆ÷¸¦ °É°í, Èü ¿µ¿ªÀ» º¸ÀÚ.
+ë¸Œí¬ë¥¼ ê±¸ê³ , íž™ ì˜ì—­ì„ ë³´ìž.
 
 ![](https://lh4.googleusercontent.com/7Z3nQrd18v5-AivCpMggFhwtNoMpE_pqeQhfVbySoQ4o-xwRM9EGHRpL5wHkYyR8JB3IyzmWX9Zo2bI1pn-asBZU9RgTgjGdR-09gCqmMn1ke1R9UF-ZnZA-U2FiAEV22UvujpG6)
 
-¹º°¡ Ãß°¡ µÆ´Ù.
+ë­”ê°€ ì¶”ê°€ ëë‹¤.
 
-¾Æ±î free chunkÀÇ ±¸Á¶¸¦ ³ªÅ¸³½ Ç¥¿Í ºñ±³ÇØº¸¸é fd ¿Í bk°¡ freeµÈ chunk¿¡ ÀÖ´Â °ÍÀ» È®ÀÎ ÇÒ ¼ö ÀÖ´Ù.
+ì•„ê¹Œ free chunkì˜ êµ¬ì¡°ë¥¼ ë‚˜íƒ€ë‚¸ í‘œì™€ ë¹„êµí•´ë³´ë©´ fd ì™€ bkê°€ freeëœ chunkì— ìžˆëŠ” ê²ƒì„ í™•ì¸ í•  ìˆ˜ ìžˆë‹¤.
 
 0x602010 -> fd - forward pointer
 
 0x602018 -> bk - backward pointer
 
-°¢°¢Àº nextchunk¸¦ °¡¸®Å°´Â pointer, prevchunk¸¦ °¡¸®Å°´Â pointerÀÌ´Ù.
+ê°ê°ì€ nextchunkë¥¼ ê°€ë¦¬í‚¤ëŠ” pointer, prevchunkë¥¼ ê°€ë¦¬í‚¤ëŠ” pointerì´ë‹¤.
 
-free°¡ ÇÑ ¹ø µÇ°í ³ª¼­´Â
+freeê°€ í•œ ë²ˆ ë˜ê³  ë‚˜ì„œëŠ”
 
 ![](https://lh3.googleusercontent.com/j8Z0oZfVV4B_nysp-5bOpDiCofEwXebQzgKWPkyOUxkJVV7S_Ilsmbsip4mnZnY5Ho7r_3L2Y2sLOhTdZdDE7EE8JSbZ3gj4jczyVUzcx37XPwBsIAK7oHzttuxllKe-FcfBHgSZ)
 
-pointer°¡ Top chunk ÀüÀ» °¡¸®Å°°í ÀÖ´Ù.
+pointerê°€ Top chunk ì „ì„ ê°€ë¦¬í‚¤ê³  ìžˆë‹¤.
 
-µÎ ¹øÂ° freeÀÌÈÄ Èü ¿µ¿ªÀ» È®ÀÎ ÇØº¸ÀÚ.
+ë‘ ë²ˆì§¸ freeì´í›„ íž™ ì˜ì—­ì„ í™•ì¸ í•´ë³´ìž.
 
 ![](https://lh5.googleusercontent.com/AZUL2F1It8hRNIt5w57spakaShr7L6kCfMIu7eFZQx6kjgxukoAUs6yFKtrZLPJgVGtjn4wkS09Yvkc_g_8sHXnOX3ZaMRumlJLHkNZznru4hKyl1zhOagAaC2PqDL_wuvwfdMFY)
 
-size of chunk °¡ 0x320 ÀÌ´Ù 0x110 + 0x210 ÀÇ °ªÀ¸·Î º¯°æµÇ¾ú´Ù.
+size of chunk ê°€ 0x320 ì´ë‹¤ 0x110 + 0x210 ì˜ ê°’ìœ¼ë¡œ ë³€ê²½ë˜ì—ˆë‹¤.
 
-ÈÄ.. ÇÁ·Î±×·¥Àº ÀÌÁ¦ Á¾·á°¡ µÈ´Ù.
+í›„.. í”„ë¡œê·¸ëž¨ì€ ì´ì œ ì¢…ë£Œê°€ ëœë‹¤.
 
-Áö±Ý±îÁö gdb·Î malloc°ú free chunkÀÇ ±¸Á¶¸¦ ºÐ¼®ÇÏ¿´´Ù.
+ì§€ê¸ˆê¹Œì§€ gdbë¡œ mallocê³¼ free chunkì˜ êµ¬ì¡°ë¥¼ ë¶„ì„í•˜ì˜€ë‹¤.
 
-´À³¤°Ç, 100¹ø ¹®¼­ºÁµµ Á÷Á¢ ÇÑ ¹ø ÇØº¸´Â°Ô ÈÎ¾À ÀÌÇØ°¡ Àß µÇ°í ¾ò´Â °Íµµ ¸¹´Ù.
+ëŠë‚€ê±´, 100ë²ˆ ë¬¸ì„œë´ë„ ì§ì ‘ í•œ ë²ˆ í•´ë³´ëŠ”ê²Œ í›¨ì”¬ ì´í•´ê°€ ìž˜ ë˜ê³  ì–»ëŠ” ê²ƒë„ ë§Žë‹¤.
