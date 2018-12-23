@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [BCTF 2016] bcloud write-up
+title: BCTF 2016 - bcloud writeup
 ---
 
 
