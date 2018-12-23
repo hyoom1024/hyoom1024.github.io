@@ -1,12 +1,12 @@
-League of guardians write-up.md
+League of guardians write up.md
 =
-»çÀÌ¹ö °¡µð¾ðÁî 1Â÷Àü¿¡¼­ Ç¬  Ç®ÀÌÀÌ´Ù.
+ì‚¬ì´ë²„ ê°€ë””ì–¸ì¦ˆ 1ì°¨ì „ì—ì„œ í‘¼  í’€ì´ì´ë‹¤.
 
 Randomgame1(misc) 
 -
- nc·Î Á¢¼ÓÇÏ¸é °¡À§¹ÙÀ§º¸¸¦ ÇÑ´Ù. ¹ÙÀÌ³Ê¸®¸¦ ¾ÆÀÌ´Ù·Î ±îº¸¸é rand·Î °ªÀ» ¸¸µé°í winÀ» 9¹øº¸´Ù ¸¹ÀÌ ÇØ¾ßÇÑ´Ù. °í·Î ´Ù ÀÌ±â¸é µÈ´Ù. rand°ªÀ» ÀÌ±æ·Á¸é ¾îÂ¼Áö »ý°¢ÇÏ´Ù°¡ ½Ãµå°¡ ÀÏÁ¤½Ã°£¸¶´Ù ¹Ù²î´Â °ÍÀ» ¾Ë¾Ò´Ù. 
+ ncë¡œ ì ‘ì†í•˜ë©´ ê°€ìœ„ë°”ìœ„ë³´ë¥¼ í•œë‹¤. ë°”ì´ë„ˆë¦¬ë¥¼ ì•„ì´ë‹¤ë¡œ ê¹Œë³´ë©´ randë¡œ ê°’ì„ ë§Œë“¤ê³  winì„ 9ë²ˆë³´ë‹¤ ë§Žì´ í•´ì•¼í•œë‹¤. ê³ ë¡œ ë‹¤ ì´ê¸°ë©´ ëœë‹¤. randê°’ì„ ì´ê¸¸ë ¤ë©´ ì–´ì©Œì§€ ìƒê°í•˜ë‹¤ê°€ ì‹œë“œê°€ ì¼ì •ì‹œê°„ë§ˆë‹¤ ë°”ë€ŒëŠ” ê²ƒì„ ì•Œì•˜ë‹¤. 
 
-±×·¡¼­ µ¿½Ã°£¿¡ ¼¼¼ÇÀ» 2°³ ¿­¾î³õ°í Ã¹ ¹øÂ° ¼¼¼Ç¿¡¼­ ³ª¿Â °ªÀ» Åä´ë·Î winÀ» ÇÏ±â À§ÇÑ °æ¿ì¸¦ ÆÄ¾ÇÇÑ µÚ ´Ù ÀÌ°ÜÁÖ¸é flag¸¦ ¾òÀ» ¼ö ÀÖ´Ù.
+ê·¸ëž˜ì„œ ë™ì‹œê°„ì— ì„¸ì…˜ì„ 2ê°œ ì—´ì–´ë†“ê³  ì²« ë²ˆì§¸ ì„¸ì…˜ì—ì„œ ë‚˜ì˜¨ ê°’ì„ í† ëŒ€ë¡œ winì„ í•˜ê¸° ìœ„í•œ ê²½ìš°ë¥¼ íŒŒì•…í•œ ë’¤ ë‹¤ ì´ê²¨ì£¼ë©´ flagë¥¼ ì–»ì„ ìˆ˜ ìžˆë‹¤.
 
 `solve.py`
 ```python
@@ -38,7 +38,7 @@ log.success(s2.recvline())
 
 pang(misc)
 -
-ÀÌ ¹®Á¦´Â ±×³É pwntoolÀÌ³ª ÆÄÀÌ½ã ¼ÒÄÏÀ» ÀÌ¿ëÇÏ¸é Ç®¸®´Â ¹®Á¦ÀÌ´Ù. random1 °ªÀÌ ³ª¿Â °ÍÀ» ±×´ë·Î ÀÔ·ÂÇÏ°í random2 ³ª¿Â °ªÀ» input2·Î  ¶Ç ÀÔ·ÂÇÏ°í str(int(ran2[0].encode("hex"),16) * ran1)ÇÑ °ªÀ» input3¿¡ ÀÔ·ÂÇÏ¸é ÇÃ·¡±×°¡ ³ª¿Â´Ù.
+ì´ ë¬¸ì œëŠ” ê·¸ëƒ¥ pwntoolì´ë‚˜ íŒŒì´ì¬ ì†Œì¼“ì„ ì´ìš©í•˜ë©´ í’€ë¦¬ëŠ” ë¬¸ì œì´ë‹¤. random1 ê°’ì´ ë‚˜ì˜¨ ê²ƒì„ ê·¸ëŒ€ë¡œ ìž…ë ¥í•˜ê³  random2 ë‚˜ì˜¨ ê°’ì„ input2ë¡œ  ë˜ ìž…ë ¥í•˜ê³  str(int(ran2[0].encode("hex"),16) * ran1)í•œ ê°’ì„ input3ì— ìž…ë ¥í•˜ë©´ í”Œëž˜ê·¸ê°€ ë‚˜ì˜¨ë‹¤.
 
 `solve.py`
 ```python
@@ -65,16 +65,16 @@ s.interactive()
 
 Randomgame2(pwn)
 -
-Randomgame1°ú °°Àº ¹æ¹ýÀÌÁö¸¸ Á¶±Ý pwnableÀû Áö½ÄÀÌ ´õÇØÁ®¼­ pwnÀ¸·Î ³ª¿Ô´Ù. ¹ÙÀÌ³Ê¸®¸¦ ¾ÆÀÌ´Ù·Î ±îº¸¸é
+Randomgame1ê³¼ ê°™ì€ ë°©ë²•ì´ì§€ë§Œ ì¡°ê¸ˆ pwnableì  ì§€ì‹ì´ ë”í•´ì ¸ì„œ pwnìœ¼ë¡œ ë‚˜ì™”ë‹¤. ë°”ì´ë„ˆë¦¬ë¥¼ ì•„ì´ë‹¤ë¡œ ê¹Œë³´ë©´
 
 **![](https://lh5.googleusercontent.com/t4wJeY9EiKzl3YFpCRix7_HWC0wnye0IE96gTPJVch8D8CSFs3NyspajrYQc1drG3CiLZGwMlSmwDq5SpVv963f6F_wcKKu44Cpq1ZCe8EE_X4fRanBVvuaFRSTYYGuSbC-QE56j)** 
 
-°ÔÀÓÀ» Áö¸é --v8°¡ µÇ°í ÀÌ±â¸é ++v8ÀÌ µÈ´Ù. ±×¸®°í v8 > v10(-3À¸·Î ÃÊ±âÈ­ µÇ¾îÀÖÀ½)ÀÌ¸é cat flag¸¦ ÇØÁØ´Ù. 
-ÇÏÁö¸¸ ¿©±â¼­ ÇÙ½ÉÀº v8Àº 
+ê²Œìž„ì„ ì§€ë©´ --v8ê°€ ë˜ê³  ì´ê¸°ë©´ ++v8ì´ ëœë‹¤. ê·¸ë¦¬ê³  v8 > v10(-3ìœ¼ë¡œ ì´ˆê¸°í™” ë˜ì–´ìžˆìŒ)ì´ë©´ cat flagë¥¼ í•´ì¤€ë‹¤. 
+í•˜ì§€ë§Œ ì—¬ê¸°ì„œ í•µì‹¬ì€ v8ì€ 
 
 **![](https://lh4.googleusercontent.com/oFO3vrLSeIoV5tgF7EjlooK_zY9vH2ElowMnlfSWm4XJw-V3tkgGtycSckMjsWGHynyHVPk6k0m3QPAcGr85hSJGnWm-8U6KV2FOFNHU4biXKyVokg5Li0MFAWdSrhI47JMG9Yev)**
 
-unsigned·Î ¼±¾ð µÇ¾îÀÖ´Ù. À½¼ö¸¦ Æ÷ÇÔÇÏÁö ¾Ê´Â´Ù. µû¶ó¼­ Ã¹ ¹ÙÀÌÆ®°¡ À½°ú ¾çÀ» ÆÇ´ÜÇÏ±â ¶§¹®¿¡ -3º¸´Ù Å¬·Á¸é -4, -5, -6ÀÌ·¸°Ô µÇ¾î¾ß ÇÑ´Ù. µû¶ó¼­ °¡À§¹ÙÀ§º¸ °ÔÀÓ¿¡¼­ ´Ù Áö¸é µÈ´Ù. 
+unsignedë¡œ ì„ ì–¸ ë˜ì–´ìžˆë‹¤. ìŒìˆ˜ë¥¼ í¬í•¨í•˜ì§€ ì•ŠëŠ”ë‹¤. ë”°ë¼ì„œ ì²« ë°”ì´íŠ¸ê°€ ìŒê³¼ ì–‘ì„ íŒë‹¨í•˜ê¸° ë•Œë¬¸ì— -3ë³´ë‹¤ í´ë ¤ë©´ -4, -5, -6ì´ë ‡ê²Œ ë˜ì–´ì•¼ í•œë‹¤. ë”°ë¼ì„œ ê°€ìœ„ë°”ìœ„ë³´ ê²Œìž„ì—ì„œ ë‹¤ ì§€ë©´ ëœë‹¤. 
 
 ```python
 from pwn import *
@@ -105,18 +105,18 @@ log.success(s2.recvline())
 
 guess(pwn)
 -
-elf 64bit ¹®Á¦ÀÌ´Ù. 
+elf 64bit ë¬¸ì œì´ë‹¤. 
 
 
 **![](https://lh3.googleusercontent.com/vLiNCMdRejXRccUGYdu-8wsoUoOwnK0SWHPXxZDu28rnUE2zjfhZSBb_ghvaB6FskO9avRGvb274SMLYY23pXAfU3T4ip7wU1RfKkt_sUsHfixc9CXhUrRIfAMP0Z6fUdYg1UsMd)**
 
 
-¸Þ¸ð¸® º¸È£ ±â¹ýÀº ÀÌ·¯ÇÏ´Ù.
+ë©”ëª¨ë¦¬ ë³´í˜¸ ê¸°ë²•ì€ ì´ëŸ¬í•˜ë‹¤.
 
 **![](https://lh6.googleusercontent.com/PnE3-7HHBpG7k0CXH9gVTRmSetQAXWkrXJtkBtr-oMxqnl1kT32zIrWklVPbldhjPNWQgle29iQzuTY2yguiAKBewCy3FpMiNFvdd82d_LRRpbiSgAxshY1M7lil3iYT5Ir2-q_S)**
 
 
-¹ÙÀÌ³Ê¸®¸¦ ±îº¸¸é v6ÀÌ¶ó´Â º¯¼ö¿¡ rand°ªÀ» ³Ö¾îÁØ´Ù. ±×¸®°í ±× °ªÀÌ ÀÔ·Â¹Þ´Â °ª°ú °°À¸¸é system("/bin/sh")À» ½ÇÇàÇØÁØ´Ù. bufÀÇ À§Ä¡´Â rbp-0x20, v6º¯¼öÀÇ À§Ä¡´Â rbp-0x10ÀÌ´Ù. bufÀÇ ÁÖ¼ÒºÎÅÍ 0x1E¸¸Å­ ÀÔ·ÂÀ» ¹ÞÀ» ¼ö ÀÖÀ¸´Ï ¿À¹öÇÃ·Î¿ì¸¦ ÅëÇØ "Nice to meet you %s"¿¡¼­ v6(rand)°ªÀ» leakÇÒ ¼ö ÀÖ´Ù.
+ë°”ì´ë„ˆë¦¬ë¥¼ ê¹Œë³´ë©´ v6ì´ë¼ëŠ” ë³€ìˆ˜ì— randê°’ì„ ë„£ì–´ì¤€ë‹¤. ê·¸ë¦¬ê³  ê·¸ ê°’ì´ ìž…ë ¥ë°›ëŠ” ê°’ê³¼ ê°™ìœ¼ë©´ system("/bin/sh")ì„ ì‹¤í–‰í•´ì¤€ë‹¤. bufì˜ ìœ„ì¹˜ëŠ” rbp-0x20, v6ë³€ìˆ˜ì˜ ìœ„ì¹˜ëŠ” rbp-0x10ì´ë‹¤. bufì˜ ì£¼ì†Œë¶€í„° 0x1Eë§Œí¼ ìž…ë ¥ì„ ë°›ì„ ìˆ˜ ìžˆìœ¼ë‹ˆ ì˜¤ë²„í”Œë¡œìš°ë¥¼ í†µí•´ "Nice to meet you %s"ì—ì„œ v6(rand)ê°’ì„ leakí•  ìˆ˜ ìžˆë‹¤.
 
 
 `exploit.py`
@@ -141,26 +141,26 @@ s.interactive()
 
 yourNAME(pwn)
 -
-elf 64bit ¹®Á¦ÀÌ´Ù.
+elf 64bit ë¬¸ì œì´ë‹¤.
 
 **![](https://lh4.googleusercontent.com/QvNUncstkqYiV7rw434ww0lgtrL8sa70f1luprMjugK3bUrT7I5kpz-y2uaSqtd1ux-cWPdKruMs3UHs-75YdYanzwpueu8Nc7PPyX_fMzpO2Bl4k67-wI1_mOZ3wmYX16f77zAr)**
 
-¸Þ¸ð¸® º¸È£±â¹ýÀº ÀÌ·¯ÇÏ´Ù.
+ë©”ëª¨ë¦¬ ë³´í˜¸ê¸°ë²•ì€ ì´ëŸ¬í•˜ë‹¤.
 
 
 **![](https://lh6.googleusercontent.com/SCTbr3vyc1Sj1taF7wT8M9qhswYgo0aYVorKvjPHgK17Z8En912wM4w5YkuP3lRdmI1p-h09nB6Au7VrUorucXK1MSRREuRPaDKfwqWniISEX98OnIMEFZ0_Pd-I_Tl9yAEE3b3a)**
 
 
-scanf¿¡¼­ overflow°¡ ¹ß»ýÇÑ´Ù. ±×¸®°í ¹ÙÀÌ³Ê¸®¸¦ Àß º¸¸é,
+scanfì—ì„œ overflowê°€ ë°œìƒí•œë‹¤. ê·¸ë¦¬ê³  ë°”ì´ë„ˆë¦¬ë¥¼ ìž˜ ë³´ë©´,
 
 
 **![](https://lh5.googleusercontent.com/Ci3PNYMGNgRajSF1XWTosYk25c9Mwy1LUL55v6oIOdcPVYEniya88Q14oFAdsIUXhMtfsLt_8caOcKvAOa9tVauDj9NSpX6bEzvC2F4EYKE9uDQM73D4l8V67ISUVZd2B3i5-eYg)**
 
-ÀÌ·± ÇÔ¼ö°¡ ÀÖ´Ù. À§¿¡ if¹® ¹«½ÃÇÏ°í
+ì´ëŸ° í•¨ìˆ˜ê°€ ìžˆë‹¤. ìœ„ì— ifë¬¸ ë¬´ì‹œí•˜ê³ 
 
 **![](https://lh6.googleusercontent.com/05KfovEsbj5EtXQcKq5sLQ2e4QbGoCVrWsVnF6bmeWghbTsdsewz0GbKjjsPZwIFr7okjByOfCWdD62Xvb5FprurEHQKopHy6UpwSuyWwxX-MgGQlO5uq-ARB19d3a8iN8IYtM9o)**
 
-ÀÌ ÁÖ¼Ò¸¸ ¾³½ÏÇØ¼­ ret¿¡ ¹ÚÀ¸¸é µÈ´Ù. 
+ì´ ì£¼ì†Œë§Œ ì“±ì‹¹í•´ì„œ retì— ë°•ìœ¼ë©´ ëœë‹¤. 
 
 `exploit.py`
 ```python
@@ -180,15 +180,15 @@ s.interactive()
 
 dance(pwn)
 -
-elf 64bitÀÌ´Ù. 
+elf 64bitì´ë‹¤. 
 
 **![](https://lh3.googleusercontent.com/zqGxI6OzffXPvUUKKCcoj2K6pkDZWdDEaS2-jsrGwyY4fAx98GCxerYp3DPCDaS31beGovx_rDGosIEbI7yqZe_eU7kk3SUgAnI4MKtU5_c-iMSFO8Efyz51DSkgaYh-l_Bf-6Xz)**
 
-NX°¡ È°¼ºÈ­ µÇ¾îÀÖ´Ù. 
+NXê°€ í™œì„±í™” ë˜ì–´ìžˆë‹¤. 
 
-¾ÆÀÌ´Ù·Î ºÐ¼®ÇÏ¸é, 1¹ø ¸Þ´º³ª 2¹ø ¸Þ´º scanf¿¡¼­ overflow°¡ °¡´ÉÇÏ´Ù. ±×¸®°í welldone ÇÔ¼ö¿¡¼­ systemÇÔ¼ö°¡ »ç¿ëµÇ¾ú´Ù.
+ì•„ì´ë‹¤ë¡œ ë¶„ì„í•˜ë©´, 1ë²ˆ ë©”ë‰´ë‚˜ 2ë²ˆ ë©”ë‰´ scanfì—ì„œ overflowê°€ ê°€ëŠ¥í•˜ë‹¤. ê·¸ë¦¬ê³  welldone í•¨ìˆ˜ì—ì„œ systemí•¨ìˆ˜ê°€ ì‚¬ìš©ë˜ì—ˆë‹¤.
 
- ROPÇÒ ¶§ systemÀÎÀÚ·Î ³Ñ°Ü ÁÙ /bin/sh°¡Á¬Àº  ¹ÙÀÌ³Ê¸® ¾È¿¡ ÀÖ´Â ½Éº¼ÀÎ fflushÀÇ µÚ¿¡ shºÎºÐ¸¸ »ç¿ëÇÏ¸é µÈ´Ù. ±×¸®°í prdi °¡Á¬À» »ç¿ëÇÏ¸é ¾È µÇ°í, gadget()¿¡ ÀÖ´Â pop rdi, pop rbp, retÀ» »ç¿ëÇØ¾ß ÇÑ´Ù. 
+ ROPí•  ë•Œ systemì¸ìžë¡œ ë„˜ê²¨ ì¤„ /bin/shê°€ì ¯ì€  ë°”ì´ë„ˆë¦¬ ì•ˆì— ìžˆëŠ” ì‹¬ë³¼ì¸ fflushì˜ ë’¤ì— shë¶€ë¶„ë§Œ ì‚¬ìš©í•˜ë©´ ëœë‹¤. ê·¸ë¦¬ê³  prdi ê°€ì ¯ì„ ì‚¬ìš©í•˜ë©´ ì•ˆ ë˜ê³ , gadget()ì— ìžˆëŠ” pop rdi, pop rbp, retì„ ì‚¬ìš©í•´ì•¼ í•œë‹¤. 
 
 `exploit.py`
 ```python
