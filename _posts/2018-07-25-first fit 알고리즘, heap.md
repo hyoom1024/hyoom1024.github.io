@@ -1,7 +1,10 @@
-  
-malloc °ú free¸¦ Àß ¾Ë¾Æº¸±â À§ÇØ ÄÚµå¸¦ Â¥ºÃ´Ù.
+ ---
+layout: post
+title: first fit ì•Œê³ ë¦¬ì¦˜, heap
+---
+malloc ê³¼ freeë¥¼ ìž˜ ì•Œì•„ë³´ê¸° ìœ„í•´ ì½”ë“œë¥¼ ì§œë´¤ë‹¤.
 
->>heap.c
+>heap.c
 
   
 ```c
@@ -61,19 +64,19 @@ return 0;
 ```
   
 
-a, b, c¸¦ ÇÒ´çÇØÁØ´Ù.
+a, b, cë¥¼ í• ë‹¹í•´ì¤€ë‹¤.
 
   
 
-±×·¯¸é a | b | c ÀÌ·¸°Ô ½×ÀÌ°Ú´Ù.
+ê·¸ëŸ¬ë©´ a | b | c ì´ë ‡ê²Œ ìŒ“ì´ê² ë‹¤.
 
   
 
-±×·±´ÙÀ½ a¿Í b¸¦ free ÇÑ ´ÙÀ½
+ê·¸ëŸ°ë‹¤ìŒ aì™€ bë¥¼ free í•œ ë‹¤ìŒ
 
   
 
-d¿Í e¸¦ mallocÇØÁÖ¸é
+dì™€ eë¥¼ mallocí•´ì£¼ë©´
 
   
 
@@ -81,11 +84,11 @@ e | d | c
 
   
 
-first fit ¾Ë°í¸®Áò¿¡ ÀÇÇØ ÀÌ·¸°Ô µé¾î°£´Ù. d°¡ Á¦ÀÏ ³·Àº ÁÖ¼Ò¿¡ µé¾î°¡´Â °ÍÀÌ ¾Æ´Ñ c ¹Ù·Î Àü¿¡ µé¾î°£´Ù.
+first fit ì•Œê³ ë¦¬ì¦˜ì— ì˜í•´ ì´ë ‡ê²Œ ë“¤ì–´ê°„ë‹¤. dê°€ ì œì¼ ë‚®ì€ ì£¼ì†Œì— ë“¤ì–´ê°€ëŠ” ê²ƒì´ ì•„ë‹Œ c ë°”ë¡œ ì „ì— ë“¤ì–´ê°„ë‹¤.
 
   
 
-½ÇÇà °á°úÀÌ´Ù.
+ì‹¤í–‰ ê²°ê³¼ì´ë‹¤.
 
   
 
