@@ -4,41 +4,41 @@
 
 ![](https://lh3.googleusercontent.com/30jp43G1peSoaTKeRUwwDruSbj4XJPeXdRwlgoEQYvEM8t74hABaLQ7Q4WDndC1Lg2-E9BQp4O8OC0vYZPgorry0nXMVJLxgD9LXecK0zHWuh7E-SAZF1bJ3JgS7Cp2NbMG6ZENg)
 
-ÀÌ ¹ÙÀÌ³Ê¸®´Â ELF 64bit ÆÄÀÏÀÔ´Ï´Ù. static ÄÄÆÄÀÏÀÌ µÇ¾î ÀÖ¾ú°í, stripµÈ ÆÄÀÏÀÌ¿´½À´Ï´Ù.
+ì´ ë°”ì´ë„ˆë¦¬ëŠ” ELF 64bit íŒŒì¼ìž…ë‹ˆë‹¤. static ì»´íŒŒì¼ì´ ë˜ì–´ ìžˆì—ˆê³ , stripëœ íŒŒì¼ì´ì˜€ìŠµë‹ˆë‹¤.
 
-static ÄÄÆÄÀÏ°ú stripÀÌ µÇ¾îÀÖ¾î¼­ ºÐ¼®ÀÌ ¾î·Á¿üÁö¸¸ gdb·Î Èå¸§À» ÂÑÀ¸¸ç ºÐ¼®ÇÏ¿´½À´Ï´Ù.
+static ì»´íŒŒì¼ê³¼ stripì´ ë˜ì–´ìžˆì–´ì„œ ë¶„ì„ì´ ì–´ë ¤ì› ì§€ë§Œ gdbë¡œ íë¦„ì„ ì«“ìœ¼ë©° ë¶„ì„í•˜ì˜€ìŠµë‹ˆë‹¤.
 
 2. Vulnerability
 
 ----------
 
-¸Þ´º 2. Edit message¿¡¼­ message¸¦ ÀÔ·Â ¹Þ´Âµ¥, ¿©±â¼­ buffer overflow Ãë¾àÁ¡ÀÌ ¹ß»ýÇÕ´Ï´Ù.
+ë©”ë‰´ 2. Edit messageì—ì„œ messageë¥¼ ìž…ë ¥ ë°›ëŠ”ë°, ì—¬ê¸°ì„œ buffer overflow ì·¨ì•½ì ì´ ë°œìƒí•©ë‹ˆë‹¤.
 
 ![](https://lh4.googleusercontent.com/H-MRa7p21Sfj16r6UWCP2MjpzUMPzuZ5oYkht_fLMQtMFxwg0Fl84wgRW0G0BgSBTk0VF5pcbMGjCTOlaScz092GBhAOOiEWKYyG9txbLmaryCIApToHZjUBafx75bNfqiUHELnd)
 
-¼¼¹øÂ° ÀÎÀÚÀÎ edx °¡ 400À¸·Î ¼¼ÆÃ µÇ¾î ÀÖ½À´Ï´Ù. ÀÌ´Â 1024¸¸Å­ ÀÔ·ÂÀ» ¹ÞÀ» ¼ö ÀÖ°Ô µË´Ï´Ù.
+ì„¸ë²ˆì§¸ ì¸ìžì¸ edx ê°€ 400ìœ¼ë¡œ ì„¸íŒ… ë˜ì–´ ìžˆìŠµë‹ˆë‹¤. ì´ëŠ” 1024ë§Œí¼ ìž…ë ¥ì„ ë°›ì„ ìˆ˜ ìžˆê²Œ ë©ë‹ˆë‹¤.
 
 ![](https://lh4.googleusercontent.com/ctjVB282zddqRF4IsuXfUfHozYMTmCx0QHQ22fE7D1EQn3_GSBLaKWIipt5h3ZwodEXIYtQ3M0y06fmZqkDnxU9cPp3WcE1RpHZecuIWxuWgnma01FRyk_-spAfRt1GVaTh-n5ST)
 
-sys_input? ÇÔ¼ö¸¦ º¸¸é eax¸¦ 0À¸·Î ¼¼ÆÃÇÏ°í syscall ÇÏ´Â °ÍÀ» º¼ ¼ö ÀÖ½À´Ï´Ù. 64ºñÆ®¿¡¼­ sys_read´Â rax°¡ 0À¸·Î ¼¼ÆÃµÇ¾îÀÖÀ¸¸é È£Ãâ µË´Ï´Ù.
+sys_input? í•¨ìˆ˜ë¥¼ ë³´ë©´ eaxë¥¼ 0ìœ¼ë¡œ ì„¸íŒ…í•˜ê³  syscall í•˜ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 64ë¹„íŠ¸ì—ì„œ sys_readëŠ” raxê°€ 0ìœ¼ë¡œ ì„¸íŒ…ë˜ì–´ìžˆìœ¼ë©´ í˜¸ì¶œ ë©ë‹ˆë‹¤.
 
 ![](https://lh3.googleusercontent.com/tfVHbhAUepw4VzGzcN39FcCIvczecNigw48c509WBbZ3SczgkCY2t-2AOOE1NLZUb50jI10eYezeB_OhHzjz8VtCi3K4VaWvh3_6NNC7fbR6LRjzHn7rEN3n8ImHdsI0eWJPbtyt)
 
-ÀÔ·ÂÀ» ¹Þ´Â v8º¯¼ö´Â bp - 0xd0 À§Ä¡¿¡ ÀÖÀ¸¸ç bp - 208 À§Ä¡¿¡ ÀÖ½À´Ï´Ù. 1024¸¸Å­ ÀÔ·ÂÀ» ¹ÞÀ» ¼ö ÀÖÀ¸´Ï bof°¡ °¡´ÉÇÕ´Ï´Ù.
+ìž…ë ¥ì„ ë°›ëŠ” v8ë³€ìˆ˜ëŠ” bp - 0xd0 ìœ„ì¹˜ì— ìžˆìœ¼ë©° bp - 208 ìœ„ì¹˜ì— ìžˆìŠµë‹ˆë‹¤. 1024ë§Œí¼ ìž…ë ¥ì„ ë°›ì„ ìˆ˜ ìžˆìœ¼ë‹ˆ bofê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.
 
-ÇÏÁö¸¸ bp - 0x8 À§Ä¡¿¡ canary º¯¼ö°¡ ÀÖ´Â °ÍÀ» È®ÀÎ ÇÒ ¼ö ÀÖ¾ú½À´Ï´Ù. ÇÏÁö¸¸ ÀÌ´Â 1. show ¸Þ´º¿¡¼­ leakÀÌ °¡´ÉÇß½À´Ï´Ù.
+í•˜ì§€ë§Œ bp - 0x8 ìœ„ì¹˜ì— canary ë³€ìˆ˜ê°€ ìžˆëŠ” ê²ƒì„ í™•ì¸ í•  ìˆ˜ ìžˆì—ˆìŠµë‹ˆë‹¤. í•˜ì§€ë§Œ ì´ëŠ” 1. show ë©”ë‰´ì—ì„œ leakì´ ê°€ëŠ¥í–ˆìŠµë‹ˆë‹¤.
 
 3. exploit
 
 ----------
 
-static ÄÄÆÄÀÏ°ú strip ÀÌ µÇ¾îÀÖ¾î¼­ ÀÏ¹ÝÀûÀÎ rop´Â Èûµé¾îº¸¿´½À´Ï´Ù. ´Ù¸¸ ÀÌ ¹®Á¦¿¡¼­ syscallÀ» ÀÌ¿ëÇÏ±â ¶§¹®¿¡ °ü·ÃµÈ Á¤º¸¸¦ °øºÎÇÏ¿´°í, syscallÀ» ÀÌ¿ëÇØ rop°¡ °¡´ÉÇÏ´Ù´Â Á¡À» ¾Ë¾Ò½À´Ï´Ù. canary°¡ È°¼ºÈ­ µÇ¾îÀÖ±â ¶§¹®¿¡ canary¸¦ ¸ÕÀú leakÀ» ¸ÕÀú ÇØÁØ ´ÙÀ½, ´Ù½Ã input¿¡¼­ overflow·Î ropÇØÁÖ¸é µÇ´Â ¹®Á¦¿´½À´Ï´Ù.
+static ì»´íŒŒì¼ê³¼ strip ì´ ë˜ì–´ìžˆì–´ì„œ ì¼ë°˜ì ì¸ ropëŠ” íž˜ë“¤ì–´ë³´ì˜€ìŠµë‹ˆë‹¤. ë‹¤ë§Œ ì´ ë¬¸ì œì—ì„œ syscallì„ ì´ìš©í•˜ê¸° ë•Œë¬¸ì— ê´€ë ¨ëœ ì •ë³´ë¥¼ ê³µë¶€í•˜ì˜€ê³ , syscallì„ ì´ìš©í•´ ropê°€ ê°€ëŠ¥í•˜ë‹¤ëŠ” ì ì„ ì•Œì•˜ìŠµë‹ˆë‹¤. canaryê°€ í™œì„±í™” ë˜ì–´ìžˆê¸° ë•Œë¬¸ì— canaryë¥¼ ë¨¼ì € leakì„ ë¨¼ì € í•´ì¤€ ë‹¤ìŒ, ë‹¤ì‹œ inputì—ì„œ overflowë¡œ ropí•´ì£¼ë©´ ë˜ëŠ” ë¬¸ì œì˜€ìŠµë‹ˆë‹¤.
 
-canary´Â ³Î¹ÙÀÌÆ® + 7byte ÀÌ·¸°Ô ±¸¼ºÀÌ µÇ´Âµ¥, 1¹ÙÀÌÆ®¸¦ overflowÇÏ¸é ¹®ÀÚ¿­ÀÇ ³¡À» ÀÎ½Ä ¸øÇØ µÚ¿¡ ¹ÙÀÌÆ®±îÁö leakÀÌ µË´Ï´Ù.
+canaryëŠ” ë„ë°”ì´íŠ¸ + 7byte ì´ë ‡ê²Œ êµ¬ì„±ì´ ë˜ëŠ”ë°, 1ë°”ì´íŠ¸ë¥¼ overflowí•˜ë©´ ë¬¸ìžì—´ì˜ ëì„ ì¸ì‹ ëª»í•´ ë’¤ì— ë°”ì´íŠ¸ê¹Œì§€ leakì´ ë©ë‹ˆë‹¤.
 
-syscall rop °°Àº °æ¿ì´Â °¢ syscall rax number°¡ Á¤ÇØÁ®ÀÖ´Âµ¥, ¸ÕÀú bss ¿µ¿ª¿¡ ¡°/bin/sh¡±À» Àû±â À§ÇØ ÀÎÀÚ ¼¼ÆÃ ÈÄ read(rax == 0) syscall; ret; °¡Á¬À¸·Î È£ÃâÇÑµÚ chainingÀ» ÅëÇØ rdi¿¡ bss¸¦ ¼¼ÆÃÇÏ°í rsi¿¡ 0À» ¼¼ÆÃ ÇÑ µÚ rax¿¡´Â execveÀÇ rax numberÀÎ 59¸¦ ¼¼ÆÃÇØ call Çß½À´Ï´Ù.
+syscall rop ê°™ì€ ê²½ìš°ëŠ” ê° syscall rax numberê°€ ì •í•´ì ¸ìžˆëŠ”ë°, ë¨¼ì € bss ì˜ì—­ì— â€œ/bin/shâ€ì„ ì ê¸° ìœ„í•´ ì¸ìž ì„¸íŒ… í›„ read(rax == 0) syscall; ret; ê°€ì ¯ìœ¼ë¡œ í˜¸ì¶œí•œë’¤ chainingì„ í†µí•´ rdiì— bssë¥¼ ì„¸íŒ…í•˜ê³  rsiì— 0ì„ ì„¸íŒ… í•œ ë’¤ raxì—ëŠ” execveì˜ rax numberì¸ 59ë¥¼ ì„¸íŒ…í•´ call í–ˆìŠµë‹ˆë‹¤.
 
-¹Ø¿¡´Â exploit.pyÀÔ´Ï´Ù.
+ë°‘ì—ëŠ” exploit.pyìž…ë‹ˆë‹¤.
 
 >exploit.py
 
