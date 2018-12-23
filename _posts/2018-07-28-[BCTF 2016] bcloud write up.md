@@ -3,6 +3,8 @@ layout: post
 title: [BCTF 2016] bcloud write-up
 ---
 
+하우스 오브 포스
+
 이 문제는 house of force기법을 이용한 힙 문제인데, format string bug를 trigger하는 과정이 필요하고 나한테는 다소 복잡하지만 이해하니 재밌는 문제였다.
 
 file
