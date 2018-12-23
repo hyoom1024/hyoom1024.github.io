@@ -1,100 +1,104 @@
-¾îµð¼±°¡ ¸¹ÀÌ µé¾îº» ¹®Á¦¿´´Âµ¥ ÀÌÁ¦¼­¾ß Ç¬´Ù.
+---
+layout: post
+title: [Codegate 2016] watermelon write-up
+---
+ì–´ë””ì„ ê°€ ë§Žì´ ë“¤ì–´ë³¸ ë¬¸ì œì˜€ëŠ”ë° ì´ì œì„œì•¼ í‘¼ë‹¤.
 
-¸ÕÀú ¹ÙÀÌ³Ê¸®¸¦ ºÐ¼®ÇØº¸°Ú´Ù.
+ë¨¼ì € ë°”ì´ë„ˆë¦¬ë¥¼ ë¶„ì„í•´ë³´ê² ë‹¤.
 
 ![](https://lh6.googleusercontent.com/CEtV2ySb1Pauqv7f_VM-0rTe_cxnMbRVegCVACPt4KPs9JG1jB7sY-XdIUWPcEL-ncouqfY9Lg0eyYnVtyqYXg6qlMSeG6BZSiodj1FUmu13aeyvNlp7ubi1LfUzwmFpUUDq950X)
 
-elf 32bitÆÄÀÏÀÌ´Ù
+elf 32bitíŒŒì¼ì´ë‹¤
 
-¾ÆÀÌ´Ù·Î ºÐ¼®ÇØº¸°Ú´Ù.
+ì•„ì´ë‹¤ë¡œ ë¶„ì„í•´ë³´ê² ë‹¤.
 
 ![](https://lh4.googleusercontent.com/kpgapWG54gF1cBHoRpW98281ljEVqJcUZfmgcGash-N2YrXJdn-Y02r0k0TQC4oavguAFHWsHtXpAE389gkPHdYeI87O4QcD99KHYTrhcCwwGWY16F4gLwfWlYdhdfiOMXD1HrfR)
 
-¸ÞÀÎÇÔ¼öÀÌ´Ù.
+ë©”ì¸í•¨ìˆ˜ì´ë‹¤.
 
-ÀÏ´Ü Ä«³ª¸®°¡ ÀÖ´Ù.
+ì¼ë‹¨ ì¹´ë‚˜ë¦¬ê°€ ìžˆë‹¤.
 
-ÀÏ´Ü ÀÌ¸§À» Àü¿ªº¯¼ö¿¡ ÀÔ·ÂÀ» ¹Þ°í ±× ÀÌ¸§À» Ãâ·ÂÇØÁØ´Ù.
+ì¼ë‹¨ ì´ë¦„ì„ ì „ì—­ë³€ìˆ˜ì— ìž…ë ¥ì„ ë°›ê³  ê·¸ ì´ë¦„ì„ ì¶œë ¥í•´ì¤€ë‹¤.
 
-±×¸®°í´Â ¹«ÇÑ·ÎÇÁ¸¦ µ·´Ù ¸ÕÀú switchÀÇ ÀÎÀÚ°ªÀ» º¸¸é.
+ê·¸ë¦¬ê³ ëŠ” ë¬´í•œë¡œí”„ë¥¼ ëˆë‹¤ ë¨¼ì € switchì˜ ì¸ìžê°’ì„ ë³´ë©´.
 
 ![](https://lh4.googleusercontent.com/R_80-ss1qaejL65YO7nsTZma0o1mxONDXdDYbOj4m-ZcI0hvrMzAPvsaoVR4w9S51VsuC4t9cL4Wy_m65kAvu3Q7AN3riHk4sUb1-7JbP1DpimcN4ReDtG8Upjj91himhDckxNDG)
 
-¸Þ´º¸¦ º¸¿©ÁÖ°í ÀÔ·ÂÀ» ¹Þ°í ¸®ÅÏÇØÁØ´Ù.
+ë©”ë‰´ë¥¼ ë³´ì—¬ì£¼ê³  ìž…ë ¥ì„ ë°›ê³  ë¦¬í„´í•´ì¤€ë‹¤.
 
-menu·Î renameÇÏ°Ú´Ù.
+menuë¡œ renameí•˜ê² ë‹¤.
 
 ![](https://lh4.googleusercontent.com/oWaj18XTB6EdXed26-V7wL-SI8r5Wt9b9Ia-2JN62lZdnbtviKn4nC19nEviWH8KUTQQAtC12D8YhHwADnJgaJR6bY56W3reaGRgtus17Pk5WiDrmrHgsWfDlsCA-IHlZlr4Z4eF)
 
-case¹®À» º¸¸é ¾Æ¸¶ ¸Þ´º¿¡ ¸Â´Â °¢ ÇÔ¼öµé ÀÏ°ÍÀÌ´Ù.
+caseë¬¸ì„ ë³´ë©´ ì•„ë§ˆ ë©”ë‰´ì— ë§žëŠ” ê° í•¨ìˆ˜ë“¤ ì¼ê²ƒì´ë‹¤.
 
-±Ùµ¥ \xff\xff\xff\xff´Â ¹«¾ùÀÏ±î.
+ê·¼ë° \xff\xff\xff\xffëŠ” ë¬´ì—‡ì¼ê¹Œ.
 
-¹Ù·Î -1ÀÌ´Ù. ¹®Á¦¸¦ Çª´Âµ¥¿¡´Â ÁöÀå¾øÀ¸´Ï ³Ñ¾î°¡°Ú´Ù.
+ë°”ë¡œ -1ì´ë‹¤. ë¬¸ì œë¥¼ í‘¸ëŠ”ë°ì—ëŠ” ì§€ìž¥ì—†ìœ¼ë‹ˆ ë„˜ì–´ê°€ê² ë‹¤.
 
-¸ÕÀú ¸Þ´º 1ºÎÅÍ º¸ÀÚ.
+ë¨¼ì € ë©”ë‰´ 1ë¶€í„° ë³´ìž.
 
-case 1 °°Àº °æ¿ì¿¡´Â v1ÀÇ ÁÖ¼Ò¸¦ ÀÎÀÚ·Î ³Ñ°ÜÁØ´Ù.
+case 1 ê°™ì€ ê²½ìš°ì—ëŠ” v1ì˜ ì£¼ì†Œë¥¼ ì¸ìžë¡œ ë„˜ê²¨ì¤€ë‹¤.
 
 ![](https://lh5.googleusercontent.com/6kEWQ9ZDNyOdxiQ8ioJTbZOzMciZn5ivu-hkn8XP-8_3rJdnO2Oq3lq68WxGiGQs63eJH6kLh9jvmker7Q4n8HH-KnwkbAW497T0O_06bHhjw-NrTytDsedTg8Z-AsPFBxXNkZY4)
 
-v1Àº 4400 ¹ÙÀÌÆ®¸¸Å­ÀÇ Å©±â¸¦ ÇÒ´ç ¹Þ´Â´Ù.
+v1ì€ 4400 ë°”ì´íŠ¸ë§Œí¼ì˜ í¬ê¸°ë¥¼ í• ë‹¹ ë°›ëŠ”ë‹¤.
 
-´Ù½Ã case 1ÀÇ ÇÔ¼ö¸¦ º¸ÀÚ.
+ë‹¤ì‹œ case 1ì˜ í•¨ìˆ˜ë¥¼ ë³´ìž.
 
 ![](https://lh5.googleusercontent.com/IGe6N2OBicZby9bJd84K_-puz3YwTK3nfNjARaQ-RntdATFc5wdLsfbW3GiUPlVL_CQk4ZMljxmOv4K-CTq9om0Eb2Hl_TROMuOKY9t_9JGPEaePEd8g6cyg7C2gDNA8lXfvsK0F)
 
-add musicÀ» º¸´Ï ¾Æ¸¶ Ãß°¡ÇØÁÖ´Â °Í °°´Ù.
+add musicì„ ë³´ë‹ˆ ì•„ë§ˆ ì¶”ê°€í•´ì£¼ëŠ” ê²ƒ ê°™ë‹¤.
 
-dword_804cB88Àº ¾Æ¸¶ listÀÇ ¼ø¹øÀ» º¸¿©ÁÖ´Â ±×³É Ä«¿îÆ®ÀÎ°Í °°´Ù. ±Ùµ¥ ÀÌ °ªÀÌ 100ÀÌ µÇ¸é FULLÀÌ¶ó´Â ¹®±¸¿Í ÇÔ²² ¹ÂÁ÷ÀÌ Ãß°¡°¡ µÇÁö ¾Ê´Â´Ù.
+dword_804cB88ì€ ì•„ë§ˆ listì˜ ìˆœë²ˆì„ ë³´ì—¬ì£¼ëŠ” ê·¸ëƒ¥ ì¹´ìš´íŠ¸ì¸ê²ƒ ê°™ë‹¤. ê·¼ë° ì´ ê°’ì´ 100ì´ ë˜ë©´ FULLì´ë¼ëŠ” ë¬¸êµ¬ì™€ í•¨ê»˜ ë®¤ì§ì´ ì¶”ê°€ê°€ ë˜ì§€ ì•ŠëŠ”ë‹¤.
 
-¸ÕÀú read·Î 44* count + a1 +4 ¿¡ À§Ä¡¿¡ ÀÔ·ÂÀ» ¹Þ´Â´Ù. ¸ÇÃ³À½ addÇÒ¶§´Â count°¡ 0ÀÏ °ÍÀÌ´Ù.
+ë¨¼ì € readë¡œ 44* count + a1 +4 ì— ìœ„ì¹˜ì— ìž…ë ¥ì„ ë°›ëŠ”ë‹¤. ë§¨ì²˜ìŒ addí• ë•ŒëŠ” countê°€ 0ì¼ ê²ƒì´ë‹¤.
 
-0À» »ðÀÔÇØº¸¸é *(a1+4)¿¡´Â musicÀÇ nameÀÌ ÀúÀåµÈ´Ù.
+0ì„ ì‚½ìž…í•´ë³´ë©´ *(a1+4)ì—ëŠ” musicì˜ nameì´ ì €ìž¥ëœë‹¤.
 
-´ÙÀ½ read¸¦ º¸ÀÚ.
+ë‹¤ìŒ readë¥¼ ë³´ìž.
 
-44* count + a1 +24¿¡ count°¡ 0 ÀÌ¸é *(a1+24)ÀÇ °ªÀº artistÀÇ nameÀÌ µé¾î°¥°ÍÀÌ´Ù.
+44* count + a1 +24ì— countê°€ 0 ì´ë©´ *(a1+24)ì˜ ê°’ì€ artistì˜ nameì´ ë“¤ì–´ê°ˆê²ƒì´ë‹¤.
 
-µû¶ó¼­ music°ú artist´Â 20byte(0x15)¸¸Å­ Â÷ÀÌ°¡ ³­´Ù. ¿Ö³Ä¸é ±×¸¸Å­ read·Î ÀÔ·ÂÀ» ¹ÞÀ¸´Ï±ñ.
+ë”°ë¼ì„œ musicê³¼ artistëŠ” 20byte(0x15)ë§Œí¼ ì°¨ì´ê°€ ë‚œë‹¤. ì™œëƒë©´ ê·¸ë§Œí¼ readë¡œ ìž…ë ¥ì„ ë°›ìœ¼ë‹ˆê¹.
 
-±×¸®°í --------------------------------\n\nÀ» Ãâ·ÂÈÄ
+ê·¸ë¦¬ê³  --------------------------------\n\nì„ ì¶œë ¥í›„
 
-44*count+a1(count°¡ 0ÀÏ¶§ a1) *a1¿¡´Â count+1 Áï Ãâ·ÂµÇ´Â ¸®½ºÆ® ¼ø¹øÀÎ 1ÀÌ ÀúÀåµÈ´Ù.
+44*count+a1(countê°€ 0ì¼ë•Œ a1) *a1ì—ëŠ” count+1 ì¦‰ ì¶œë ¥ë˜ëŠ” ë¦¬ìŠ¤íŠ¸ ìˆœë²ˆì¸ 1ì´ ì €ìž¥ëœë‹¤.
 
-count°¡ 99ÀÏ¶§ »ý°¢À» ÇØº¸ÀÚ. ÇÏ¸é 4400ÀÌ µü ¸Â¾Æ ¶³¾îÁø´Ù.
+countê°€ 99ì¼ë•Œ ìƒê°ì„ í•´ë³´ìž. í•˜ë©´ 4400ì´ ë”± ë§žì•„ ë–¨ì–´ì§„ë‹¤.
 
-»ç½Ç ÀÌ ÇÔ¼ö¿¡¼­ ¿À¹öÇÃ·Î¿ì°¡ ¹ß»ýÇÏ±â´Â ÇÑ´Ù.
+ì‚¬ì‹¤ ì´ í•¨ìˆ˜ì—ì„œ ì˜¤ë²„í”Œë¡œìš°ê°€ ë°œìƒí•˜ê¸°ëŠ” í•œë‹¤.
 
-ÇÏÁö¸¸ ÇÙ½ÉÀûÀÎ ¿À¹öÇÃ·Î¿ì´Â ¾ÆÁ÷ ¸øÃ£Àº °Í °°´Ù.
+í•˜ì§€ë§Œ í•µì‹¬ì ì¸ ì˜¤ë²„í”Œë¡œìš°ëŠ” ì•„ì§ ëª»ì°¾ì€ ê²ƒ ê°™ë‹¤.
 
-¾ÏÆ° v1Àº 4400byte¸¸Å­ ±¸Á¶Ã¼ÀÎ °Í °°´Ù.
+ì•”íŠ¼ v1ì€ 4400byteë§Œí¼ êµ¬ì¡°ì²´ì¸ ê²ƒ ê°™ë‹¤.
 
-{ ¼ø¹ø(4)|music(20)|artist(20) } * 99 ÇÏ´Â °Í °°´Ù.
+{ ìˆœë²ˆ(4)|music(20)|artist(20) } * 99 í•˜ëŠ” ê²ƒ ê°™ë‹¤.
 
-ÀÌ¸¸Å­¸¸ ºÐ¼®À» ÇÏ°í 2¹ø case¸¦ ºÐ¼®ÇØº¸ÀÚ.
+ì´ë§Œí¼ë§Œ ë¶„ì„ì„ í•˜ê³  2ë²ˆ caseë¥¼ ë¶„ì„í•´ë³´ìž.
 
 ![](https://lh6.googleusercontent.com/NPKrOftvaExh4RNWyOGkyo8NF5j0a9a3SkS7EGAPl4qyt0Uev6SiJkVgGriWN_bGz_FanBDUef7hPIVLJfX6A7-x0BNKKMkT88_LH1cFeOxyO9zDAKfJZKxO96nJ4EmtDsEEUiTU)
 
-¸¶Âù°¡Áö·Î v1À» ÀÎÀÚ·Î ³Ñ°ÜÁà´Ù.
+ë§ˆì°¬ê°€ì§€ë¡œ v1ì„ ì¸ìžë¡œ ë„˜ê²¨ì¤˜ë‹¤.
 
-¹¹Çò°¥¸®°ÚÁö¸¸ ¿©±â µÇ°Ô Áß¿äÇÏ´Ù. ¾Æ±î¿ì¸®°¡ Àû¾ú´ø ³»¿ëÀ» ºÒ·¯¿Í¼­ viewÇÒ ¼ö ÀÖ°Ô ÇØÁØ´Ù.
+ë­í—·ê°ˆë¦¬ê² ì§€ë§Œ ì—¬ê¸° ë˜ê²Œ ì¤‘ìš”í•˜ë‹¤. ì•„ê¹Œìš°ë¦¬ê°€ ì ì—ˆë˜ ë‚´ìš©ì„ ë¶ˆëŸ¬ì™€ì„œ viewí•  ìˆ˜ ìžˆê²Œ í•´ì¤€ë‹¤.
 
-¿©±â¼­ µü ´À³¦ÀÌ ¿Ã°Å´Ù. canary leakÀÌ °¡´ÉÇÏ´Ù. °ø±³·Ó°Ôµµ 4400¹ÙÀÌÆ® ´ÙÀ½ ¹Ù·Î Ä«³ª¸®º¯¼öÀÎ °Í À» ¾Ë¼ö ÀÖ´Ù. add list·Î 100±îÁö ²Ë²Ë Ã¤¿öÁØ ÈÄ 1byteÄ§¹üÇÏ¸é Ä«³ª¸®¸¦ leak ÇÒ ¼ö ÀÖÀ» °Í ÀÌ´Ù.
+ì—¬ê¸°ì„œ ë”± ëŠë‚Œì´ ì˜¬ê±°ë‹¤. canary leakì´ ê°€ëŠ¥í•˜ë‹¤. ê³µêµë¡­ê²Œë„ 4400ë°”ì´íŠ¸ ë‹¤ìŒ ë°”ë¡œ ì¹´ë‚˜ë¦¬ë³€ìˆ˜ì¸ ê²ƒ ì„ ì•Œìˆ˜ ìžˆë‹¤. add listë¡œ 100ê¹Œì§€ ê½‰ê½‰ ì±„ì›Œì¤€ í›„ 1byteì¹¨ë²”í•˜ë©´ ì¹´ë‚˜ë¦¬ë¥¼ leak í•  ìˆ˜ ìžˆì„ ê²ƒ ì´ë‹¤.
 
-¿ÀÄÉÀÌ ¸Õ°¡ ´À³¦ÀÌ ¿Â´Ù.
+ì˜¤ì¼€ì´ ë¨¼ê°€ ëŠë‚Œì´ ì˜¨ë‹¤.
 
-¼¼¹øÂ° case¸¦ º¸ÀÚ.
+ì„¸ë²ˆì§¸ caseë¥¼ ë³´ìž.
 
 ![](https://lh5.googleusercontent.com/sVhFOG1TK6zoc1XKVfFbZ70-Q47G8Kyt3bQirErjZIs2ziz3zvEeWL1wXqtYb5KetXtio6JPoTsaJwf-fqunSIsfugAMqP3U_w7R5kSBfQs7WMk6InJsaliTjaa-GivMnglir5Ml)
 
-¹«·Á Ãß°¡Çß´ø ³»¿ëÀ» ¼öÁ¤ÇÒ ¼ö ÀÖ´Ù.
+ë¬´ë ¤ ì¶”ê°€í–ˆë˜ ë‚´ìš©ì„ ìˆ˜ì •í•  ìˆ˜ ìžˆë‹¤.
 
-¿ÀÀ×? ±Ùµ¥ bof°¡ °¡´ÉÇÏ´Ù. °í·Î ¸¶Áö¸· listÀÇ artist¸¦ bofÇÏ¿© ropÇÏ¸é ½©À» ¾òÀ» ¼ö ÀÖÀ» °ÍÀÌ´Ù.
+ì˜¤ìž‰? ê·¼ë° bofê°€ ê°€ëŠ¥í•˜ë‹¤. ê³ ë¡œ ë§ˆì§€ë§‰ listì˜ artistë¥¼ bofí•˜ì—¬ ropí•˜ë©´ ì‰˜ì„ ì–»ì„ ìˆ˜ ìžˆì„ ê²ƒì´ë‹¤.
 
-(¿©±â¿£ systemÇÔ¼ö°¡ ¾ø¾î¼­ offsetÀ» ±¸ÇØ¾ß ÇÑ´Ù.
+(ì—¬ê¸°ì—” systemí•¨ìˆ˜ê°€ ì—†ì–´ì„œ offsetì„ êµ¬í•´ì•¼ í•œë‹¤.
 
-¹Ø¿¡´Â ÆäÀÌ·ÎµåÀÌ´Ù.
+ë°‘ì—ëŠ” íŽ˜ì´ë¡œë“œì´ë‹¤.
 
 ```python
 from pwn import  *
