@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Codegate 2016] watermelon write-up
+title: [Codegate 2016] watermelon write up
 ---
 
 어디선가 많이 들어본 문제였는데 이제서야 푼다.
