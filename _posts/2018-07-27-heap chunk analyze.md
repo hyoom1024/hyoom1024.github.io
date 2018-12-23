@@ -1,4 +1,7 @@
-
+---
+layout: post
+title: heap chunk analyze
+---
   
 보다 힙을 잘 이해하기 위해서 직접 코드를 작성하여 malloc과 free과정에서의 heap chunk의
 
