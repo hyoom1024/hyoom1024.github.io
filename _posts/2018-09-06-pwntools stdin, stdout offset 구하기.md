@@ -1,3 +1,8 @@
+---
+layout: post
+title: pwntools stdin, stdout offset êµ¬í•˜ê¸°
+---
+
 ```python
 stdout_offset = lib.symbols['_IO_2_1_stdout_']
 
@@ -5,7 +10,7 @@ stdin_offset = lib.symbols['_IO_2_1_stdin_']
 ```
 
 
-ÇÔ¼ö´Â °Á ÀÌ·¸°Ô
+
 
 ```python
 system_offset =  lib.symbols['system']
