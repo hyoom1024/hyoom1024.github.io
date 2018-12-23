@@ -3,7 +3,16 @@ layout: post
 title: first fit 알고리즘, malloc
 ---
 
+
+
+
+
 malloc 과 free를 잘 알아보기 위해 코드를 짜봤다.
+
+
+
+
+
 
 >heap.c
 
