@@ -1,3 +1,7 @@
+---
+layout: post
+title: 64bit srop write-up
+---
 1. Binary
 
 ----------
