@@ -3,7 +3,7 @@ layout: post
 title: 64bit srop write-up
 ---
 
-64비트에서의 srop문제 라업
+64비트 srop문제 라업
 
 1. Binary
 
