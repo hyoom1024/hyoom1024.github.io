@@ -3,14 +3,7 @@ layout: post
 title: 64bit srop write-up
 ---
 
-
-
-
-
-64비트 srop 문제
-
-
-
+64비트에서의 srop문제 라업
 
 1. Binary
 
@@ -151,3 +144,5 @@ s.interactive()
 FLAG : n2r{enjoying_rich_rop_with_static_binary}
 
  
+
+
