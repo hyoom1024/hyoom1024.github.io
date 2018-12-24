@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Codegate 2016 - watermelon writeup
+title: Codegate 2016 - watermelon write-up
 ---
 
 
