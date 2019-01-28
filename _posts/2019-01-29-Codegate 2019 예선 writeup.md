@@ -5,12 +5,9 @@ title: Codegate 2019 예선 write-up
 
 나는 예선에서 MIC check, 20000 두 문제를 풀게 되었다.
 
-닉네임 : leehyoreal
-
-이름 : 이효민
-
-소속 : 선린인터넷고등학교
-
+닉네임 : leehyoreal  
+이름 : 이효민  
+소속 : 선린인터넷고등학교  
 이메일 : 8891ee@naver.com
 
 ##  MIC check
