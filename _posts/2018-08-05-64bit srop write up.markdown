@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 64bit srop write-up
+title: 64bit srop write up
 ---
 
 64비트 srop문제 라업
