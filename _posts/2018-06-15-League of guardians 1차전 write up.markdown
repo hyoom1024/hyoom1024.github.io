@@ -1,6 +1,6 @@
 ---
 layout: post
-title: League of guardians 1차전 write-up
+title: League of guardians 1차전 write up
 ---
 
 
