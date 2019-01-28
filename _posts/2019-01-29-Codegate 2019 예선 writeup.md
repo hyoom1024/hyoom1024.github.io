@@ -48,7 +48,7 @@ Flag : Let the hacking begins ~
 
 입력이 system함수를 거치기 때문에 command injection이 가능하다.
 
-하지만 filter1과 filter2라는 함수 때문에 \`\, $\, &\, |\, ; 등 주요한 특수기호들이 막혀 취약점 트리거가 힘들었다.
+하지만 filter1과 filter2라는 함수 때문에 \`, $, &, \|, ; 등 주요한 특수기호들이 막혀 취약점 트리거가 힘들었다.
 
 
 **![](https://lh4.googleusercontent.com/HNMgZxdDM4MO8zutVZEiDumTWhsMBkomOiSnZq6fZAI_HBUOXFtAMxkI8ve44_opdCZMmj6OYqVwziFVYPjq8ovf9ICpkJD-EppLLJb40-0gyigVtNKZL0f_eWlUmkAZvuZ12MZ9)**
