@@ -1,23 +1,25 @@
-# Codegate 2019 ¿¹¼± write-up
+---
+layout: post
+title: Codegate 2019 ì˜ˆì„  write-up
+---
 
- 2018³â¿¡ ÀÌ¾î 2019³â ÄÚµå°ÔÀÌÆ®µµ Âü°¡ÇÏ°Ô µÇ¾ú´Ù. ³ª´Â ¿¹¼±¿¡¼­ MIC check, 20000 µÎ ¹®Á¦¸¦ Ç®°Ô µÇ¾ú´Ù.
-## Âü°¡ÀÚ Á¤º¸
-- Âü°¡ºÎ¹® : Junior
--  ´Ğ³×ÀÓ  : leehyoreal
-- ÀÌ¸§ : ÀÌÈ¿¹Î	
-- ¼Ò¼Ó : ¼±¸°ÀÎÅÍ³İ°íµîÇĞ±³
-- ÀÌ¸ŞÀÏ : 8891ee@naver.com
+
+
+ 2018ë…„ì— ì´ì–´ 2019ë…„ ì½”ë“œê²Œì´íŠ¸ë„ ì°¸ê°€í•˜ê²Œ ë˜ì—ˆë‹¤. 
+ 
+ ë‚˜ëŠ” ì˜ˆì„ ì—ì„œ MIC check, 20000 ë‘ ë¬¸ì œë¥¼ í’€ê²Œ ë˜ì—ˆë‹¤.
+
 ##  MIC check
 >Let the hacking begins ~  
 >
 >Decode it :  
 >9P&;gFD,5.BOPCdBl7Q+@V'1dDK?qL
 
-`9P&;gFD,5.BOPCdBl7Q+@V'1dDK?qL` ¶ó´Â ¹®ÀåÀ» µğÄÚµùÇÏ´Â ¹®Á¦¿´´Ù.
+`9P&;gFD,5.BOPCdBl7Q+@V'1dDK?qL` ë¼ëŠ” ë¬¸ì¥ì„ ë””ì½”ë”©í•˜ëŠ” ë¬¸ì œì˜€ë‹¤.
 
-Çì¸Å´Ù°¡ ÀÌ°ÍÀú°Í decodingÇØº¸´Ï base85(ascii85)·Î ÀÎÄÚµù µÈ ¹®ÀÚ¿­ÀÌ¾ú´Ù. 
+í—¤ë§¤ë‹¤ê°€ ì´ê²ƒì €ê²ƒ decodingí•´ë³´ë‹ˆ base85(ascii85)ë¡œ ì¸ì½”ë”© ëœ ë¬¸ìì—´ì´ì—ˆë‹¤. 
 
-[Cryptii](https://cryptii.com/pipes/ascii85-encoding) ¿©±â¼­ µğÄÚµùÇß´Ù.
+[Cryptii](https://cryptii.com/pipes/ascii85-encoding) ì—¬ê¸°ì„œ ë””ì½”ë”©í–ˆë‹¤.
 
 **![](https://lh6.googleusercontent.com/Hr7N5XtdY45KcT2ZlHnxvb1UeqF1T8ya7XGKWCXpsmFLDe-43wFuBzbKLSOes9vZDJoJs-Em3TFd0z1VgMu6kT0L7XtrPp8Mtp1VuxXU3JCSWhNhU3TXmG23j03CY_WYR73p9dpm)**
 
@@ -28,34 +30,34 @@ Flag : Let the hacking begins ~
 >
 >[Download](http://codegate.bpsec.co.kr/__BINARY/c1e3a33d8932a4a61b0e0e0e49d6c9bc)
 
-ÀÌ ¹®Á¦´Â 1°³ÀÇ elf ½ÇÇàÆÄÀÏ°ú ¾ĞÃàµÈ 20000_so.tar.gz ÆÄÀÏÀ» Á¦°øÇÑ´Ù.
+ì´ ë¬¸ì œëŠ” 1ê°œì˜ elf ì‹¤í–‰íŒŒì¼ê³¼ ì••ì¶•ëœ 20000_so.tar.gz íŒŒì¼ì„ ì œê³µí•œë‹¤.
 
-20000_so.tar.gzÀ» ¾ĞÃàÇØÁ¦ ÇØÁÖ¸é 20000°³ÀÇ lib_(n).so ÆÄÀÏÀÌ »ı¼ºµÈ´Ù. 
+20000_so.tar.gzì„ ì••ì¶•í•´ì œ í•´ì£¼ë©´ 20000ê°œì˜ lib_(n).so íŒŒì¼ì´ ìƒì„±ëœë‹¤. 
 
-¸ŞÀÎ elfÆÄÀÏÀ» ´ëÃæ ºĞ¼®ÇØº¸¸é, »ç¿ëÀÚ¿¡°Ô 0~20000 ¼ıÀÚ Áß ÇÏ³ª¸¦ ÀÔ·Â¹Ş°í ÀÔ·Â¹ŞÀº ¼ıÀÚ nÀÇ lib_(n).so ÆÄÀÏÀ» ·Îµå½ÃÄÑ .soÆÄÀÏ ³»¿¡ ÀÖ´Â testÇÔ¼ö¸¦ ½ÇÇà½ÃÅ²´Ù.
+ë©”ì¸ elfíŒŒì¼ì„ ëŒ€ì¶© ë¶„ì„í•´ë³´ë©´, ì‚¬ìš©ìì—ê²Œ 0~20000 ìˆ«ì ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥ë°›ê³  ì…ë ¥ë°›ì€ ìˆ«ì nì˜ lib_(n).so íŒŒì¼ì„ ë¡œë“œì‹œì¼œ .soíŒŒì¼ ë‚´ì— ìˆëŠ” testí•¨ìˆ˜ë¥¼ ì‹¤í–‰ì‹œí‚¨ë‹¤.
 
 **![](https://lh3.googleusercontent.com/v6sS-uoxBecsJ_6I1RjEe7NFgZQIjDCoA_u4iSalZ06lW6nWP3OIOJhKzaTOr1LWU2zxsidzNcFrUn6qbUhfjWy4O02kc03Qj00O_W0syWqBNvVPW2ibw03TCXgDlEYPPUWW8M6o)**
 
-¾Æ¹« .soÆÄÀÏÀ» load½ÃÄÑº¸¸é(unexploitable)
+ì•„ë¬´ .soíŒŒì¼ì„ loadì‹œì¼œë³´ë©´(unexploitable)
 >How do you find vulnerable file?
 
-20000°³ÀÇ .soÆÄÀÏ Áß Ãë¾àÇÑ ¹ÙÀÌ³Ê¸®¸¦ Ã£¾Æ³»´Â °ÍÀÌ ¹®Á¦ ÀÇµµÀÓÀ» ¾Ë ¼ö ÀÖ´Ù.
+20000ê°œì˜ .soíŒŒì¼ ì¤‘ ì·¨ì•½í•œ ë°”ì´ë„ˆë¦¬ë¥¼ ì°¾ì•„ë‚´ëŠ” ê²ƒì´ ë¬¸ì œ ì˜ë„ì„ì„ ì•Œ ìˆ˜ ìˆë‹¤.
 
-¹ÙÀÌ³Ê¸®¸¦ ¸î °³ ºĞ¼®ÇÏ´Ùº¸¸é filter1 filter2 ÇÔ¼ö¸¦ °¡Áø .soÆÄÀÏÀ» ·ÎµåÇÏ°í ÀÔ·Â¹ŞÀº ³»¿ëÀ» `system("ls \"ÀÔ·Â\"")`·Î ½ÇÇàÇÑ´Ù. ÀÔ·ÂÀÌ systemÇÔ¼ö¸¦ °ÅÄ¡±â ¶§¹®¿¡ command injectionÀÌ °¡´ÉÇÏ´Ù. ÇÏÁö¸¸ filter1°ú filter2¶ó´Â ÇÔ¼ö ¶§¹®¿¡ `, $, &, |, ; µî ÁÖ¿äÇÑ Æ¯¼ö±âÈ£µéÀÌ ¸·Çô Ãë¾àÁ¡ Æ®¸®°Å°¡ Èûµé¾ú´Ù.
+ë°”ì´ë„ˆë¦¬ë¥¼ ëª‡ ê°œ ë¶„ì„í•˜ë‹¤ë³´ë©´ filter1 filter2 í•¨ìˆ˜ë¥¼ ê°€ì§„ .soíŒŒì¼ì„ ë¡œë“œí•˜ê³  ì…ë ¥ë°›ì€ ë‚´ìš©ì„ `system("ls \"ì…ë ¥\"")`ë¡œ ì‹¤í–‰í•œë‹¤. ì…ë ¥ì´ systemí•¨ìˆ˜ë¥¼ ê±°ì¹˜ê¸° ë•Œë¬¸ì— command injectionì´ ê°€ëŠ¥í•˜ë‹¤. í•˜ì§€ë§Œ filter1ê³¼ filter2ë¼ëŠ” í•¨ìˆ˜ ë•Œë¬¸ì— `, $, &, |, ; ë“± ì£¼ìš”í•œ íŠ¹ìˆ˜ê¸°í˜¸ë“¤ì´ ë§‰í˜€ ì·¨ì•½ì  íŠ¸ë¦¬ê±°ê°€ í˜ë“¤ì—ˆë‹¤.
 
 
 **![](https://lh4.googleusercontent.com/HNMgZxdDM4MO8zutVZEiDumTWhsMBkomOiSnZq6fZAI_HBUOXFtAMxkI8ve44_opdCZMmj6OYqVwziFVYPjq8ovf9ICpkJD-EppLLJb40-0gyigVtNKZL0f_eWlUmkAZvuZ12MZ9)**
 
-µû¶ó¼­ exploitableÇÑ ¹ÙÀÌ³Ê¸®¸¦ Ã£¾Æ¾ß°Ú´Ù°í »ı°¢À» Çß´Ù. ³ª´Â ²Ï ½±°Ô Ã£¾Ò´Âµ¥, Á¦°ø¹ŞÀº tar.gzÆÄÀÏÀ» ¾ĞÃàÇØÁ¦ÇÏ°í `À©µµ¿ìÅ½»ö±â`¿¡¼­ ¼öÁ¤µÈ ³¯Â¥·Î Á¤·ÄÇÏ¿´´õ´Ï,
+ë”°ë¼ì„œ exploitableí•œ ë°”ì´ë„ˆë¦¬ë¥¼ ì°¾ì•„ì•¼ê² ë‹¤ê³  ìƒê°ì„ í–ˆë‹¤. ë‚˜ëŠ” ê½¤ ì‰½ê²Œ ì°¾ì•˜ëŠ”ë°, ì œê³µë°›ì€ tar.gzíŒŒì¼ì„ ì••ì¶•í•´ì œí•˜ê³  `ìœˆë„ìš°íƒìƒ‰ê¸°`ì—ì„œ ìˆ˜ì •ëœ ë‚ ì§œë¡œ ì •ë ¬í•˜ì˜€ë”ë‹ˆ,
 
 **![](https://lh3.googleusercontent.com/Lja7iaAiv8qWSmCBdV-17803ssBcAVXSuzHCMyjPar4lKX-Sb93byUxs0-FthlSDUdSAgBvuB4HypOS1UTfdjMZzF6j3mvYRGRi28RFyJVJ665EviHDlIyrN_Wb1S7-vBKpNXBeh)**
  
-Á¦ÀÏ À§¿¡ ÀÖ´Â lib_17394.so ÆÄÀÏ¸¸ ¼öÁ¤µÈ ³¯Â¥¿Í ½Ã°£ÀÌ ´Ş¶ó ¼ö»óÇØ¼­ ºĞ¼®ÇØº¸¾Ò´õ´Ï Ãë¾àÁ¡À» °¡Áø ¹ÙÀÌ³Ê¸®°¡ ¸Â¾Ò´Ù. (¾Æ¸¶ Á¦ÀÛÀÚÀÇ ½Ç¼ö°¡ ¾Æ´Ò±î½Í´Ù.)
+ì œì¼ ìœ„ì— ìˆëŠ” lib_17394.so íŒŒì¼ë§Œ ìˆ˜ì •ëœ ë‚ ì§œì™€ ì‹œê°„ì´ ë‹¬ë¼ ìˆ˜ìƒí•´ì„œ ë¶„ì„í•´ë³´ì•˜ë”ë‹ˆ ì·¨ì•½ì ì„ ê°€ì§„ ë°”ì´ë„ˆë¦¬ê°€ ë§ì•˜ë‹¤. (ì•„ë§ˆ ì œì‘ìì˜ ì‹¤ìˆ˜ê°€ ì•„ë‹ê¹Œì‹¶ë‹¤.)
 
-´Ù¸¥ filterÇÔ¼ö¿Í ´Ù¸£°Ô `|`ÆÄÀÌÇÁ¸¦ ¸·Áö ¾Ê¾Ò°í, `sh`ÀÌ¶ó´Â ¹®ÀÚ¿­µµ ÇÊÅÍ¸µÇÏÁö ¾Ê¾Ò´Ù. ±×·¡¼­ ½±°Ô `sh |`·Î  ½© ±ÇÇÑÀ» ¾òÀ» ¼ö ÀÖ¾ú´Ù.
+ë‹¤ë¥¸ filterí•¨ìˆ˜ì™€ ë‹¤ë¥´ê²Œ `|`íŒŒì´í”„ë¥¼ ë§‰ì§€ ì•Šì•˜ê³ , `sh`ì´ë¼ëŠ” ë¬¸ìì—´ë„ í•„í„°ë§í•˜ì§€ ì•Šì•˜ë‹¤. ê·¸ë˜ì„œ ì‰½ê²Œ `sh |`ë¡œ  ì‰˜ ê¶Œí•œì„ ì–»ì„ ìˆ˜ ìˆì—ˆë‹¤.
 
 **![](https://lh6.googleusercontent.com/Kr2zBPo6SAiGHfVfidZKGzAEUelBVxQQM7YtpdyAdG1V152PSSsfdgqiUxmjOsr8JwhLCwZN0HDzFK1sVkBeZGnH1AwmFc2rwummTkZ0BQDK9RL2_UNkRGH4bHcBA96TSdYhFsC-)**
 
-±×³É cat flagÇÏ¸é ¸í·É¾î Ãâ·Â °á°ú°¡ ³ª¿¡°Ô ¾Èº¸ÀÌ±â ¶§¹®¿¡ fd¸¦ >&0À¸·Î ¹Ù²ãÁÖ¸é º¸ÀÎ´Ù.
+ê·¸ëƒ¥ cat flagí•˜ë©´ ëª…ë ¹ì–´ ì¶œë ¥ ê²°ê³¼ê°€ ë‚˜ì—ê²Œ ì•ˆë³´ì´ê¸° ë•Œë¬¸ì— fdë¥¼ >&0ìœ¼ë¡œ ë°”ê¿”ì£¼ë©´ ë³´ì¸ë‹¤.
 
 flag{Are_y0u_A_h@cker_in_real-word?}
