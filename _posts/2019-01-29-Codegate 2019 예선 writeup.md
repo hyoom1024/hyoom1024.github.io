@@ -41,7 +41,7 @@ Flag : Let the hacking begins ~
 
 20000개의 .so파일 중 취약한 바이너리를 찾아내는 것이 문제 의도임을 알 수 있다.
 
-바이너리를 몇 개 분석하다보면 filter1 filter2 함수를 가진 .so파일을 로드하고 입력받은 내용을 `system("ls \"입력\"")`로 실행한다. 입력이 system함수를 거치기 때문에 command injection이 가능하다. 하지만 filter1과 filter2라는 함수 때문에 `, $, &, |, ; 등 주요한 특수기호들이 막혀 취약점 트리거가 힘들었다.
+바이너리를 몇 개 분석하다보면 filter1 filter2 함수를 가진 .so파일을 로드하고 입력받은 내용을 `system("ls \"입력\"")`로 실행한다. 입력이 system함수를 거치기 때문에 command injection이 가능하다. 하지만 filter1과 filter2라는 함수 때문에 \`, $, &, |, ; 등 주요한 특수기호들이 막혀 취약점 트리거가 힘들었다.
 
 
 **![](https://lh4.googleusercontent.com/HNMgZxdDM4MO8zutVZEiDumTWhsMBkomOiSnZq6fZAI_HBUOXFtAMxkI8ve44_opdCZMmj6OYqVwziFVYPjq8ovf9ICpkJD-EppLLJb40-0gyigVtNKZL0f_eWlUmkAZvuZ12MZ9)**
